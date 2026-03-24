@@ -126,6 +126,13 @@ dist
 .vscode-test
 .vs/
 
+# Videos — too large for GitHub, deploy via Netlify Drop
+assets/*.mp4
+assets/*.mkv
+
+# Claude memory
+.claude/
+
 # yarn v3
 .pnp.*
 .yarn/*
