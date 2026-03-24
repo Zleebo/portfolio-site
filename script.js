@@ -33,7 +33,7 @@ const PROJECTS = [
     title:       'B.L.O.O.M',
     category:    'academic',
     badge:       'SP7 · 15 Weeks',
-    youtubeId:   null, // TODO: confirm which YouTube video is BLOOM
+    youtubeId:   'gRYbjITB2rA',
     video:       '27 - Namnlös video – Gjord med Clipchamp.mp4',
     thumbnail:   'assets/Bloom.jpg',
     role:        'Gameplay Programmer',
@@ -47,7 +47,7 @@ const PROJECTS = [
     title:       'Spite',
     category:    'academic',
     badge:       'SP6 · 15 Weeks',
-    youtubeId:   null, // TODO: confirm which YouTube video is Spite
+    youtubeId:   'iZQKJXCeg0Q',
     video:       '25 - GamePlay.mp4',
     thumbnail:   'assets/p6_thumbnail.png',
     role:        'Gameplay Programmer',
@@ -61,7 +61,7 @@ const PROJECTS = [
     title:       'ShipWrecked',
     category:    'academic',
     badge:       'SP4 · 8 Weeks',
-    youtubeId:   null, // TODO: confirm — is "17 Suspectre" ShipWrecked?
+    youtubeId:   'PFRyD4OsWFs',
     video:       '17 - Suspectre.mp4',
     thumbnail:   'assets/ShipWrecked.jpg',
     role:        'Gameplay Programmer',
@@ -75,7 +75,7 @@ const PROJECTS = [
     title:       'Curse of Decay',
     category:    'academic',
     badge:       'SP3 · 8 Weeks',
-    youtubeId:   null, // TODO: confirm which YouTube video is Curse of Decay
+    youtubeId:   null,
     video:       '07 - TGA21_-_Stockholm_-_Game_Project_#3_-_Curse_of_Decay_Trailer.mp4',
     thumbnail:   'assets/CurseOfDecayu.jpg',
     role:        'Gameplay Programmer',
@@ -146,7 +146,7 @@ const PROJECTS = [
     title:       'Boss AI, JSON Phases',
     category:    'solo',
     badge:       'From Spite · SP6',
-    youtubeId:   null, // TODO: confirm — is "24 Enemies" the boss video?
+    youtubeId:   null,
     video:       '22 - Boss.mp4',
     thumbnail:   null,
     role:        'Isolated Demo',
@@ -159,7 +159,7 @@ const PROJECTS = [
     title:       'Enemy Path Tool',
     category:    'solo',
     badge:       'From B.L.O.O.M · SP7',
-    youtubeId:   null, // TODO: confirm YouTube ID for enemy tool
+    youtubeId:   null,
     video:       '21 - EnemyTool.mp4',
     thumbnail:   null,
     role:        'Isolated Demo',
@@ -185,7 +185,7 @@ const PROJECTS = [
     title:       'Infinite Maze Game',
     category:    'solo',
     badge:       'Personal',
-    youtubeId:   null, // TODO: confirm YouTube ID for maze game
+    youtubeId:   null,
     video:       '15 - MazeGame.mp4',
     thumbnail:   null,
     role:        'Personal Project',
