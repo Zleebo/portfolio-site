@@ -36,10 +36,10 @@ const PROJECTS = [
     youtubeId:   '-WP-PNvkDtM',
     thumbnail:   null,
     role:        'Gameplay Programmer',
-    tags:        ['UE5', 'C++', 'Co-op'],
+    tags:        ['UE5', 'AngelScript', 'Co-op'],
     engine:      'Unreal Engine 5',
     duration:    '8 Weeks',
-    description: 'A split-screen co-op game inspired by It Takes Two, developed in Unreal Engine 5 over 8 weeks. I implemented charging enemies that pursue and attack the player.'
+    description: 'A split-screen co-op game inspired by It Takes Two, developed in Unreal Engine 5 over 8 weeks using AngelScript. My contributions included charging enemies and hazard movables, among other gameplay systems.'
   },
   {
     id:          'bloom',
