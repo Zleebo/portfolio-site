@@ -384,14 +384,19 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.15; }
 .exp-game-genre {
   font-size: 0.9rem;
   color: var(--text-muted);
-  margin-bottom: 16px;
+  margin-bottom: 4px;
+}
+.exp-game-role {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  margin-bottom: 14px;
 }
 .exp-game-desc {
   font-size: 0.9375rem;
   color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 20px;
-  font-style: italic;
 }
 .exp-game-tags {
   display: flex;
