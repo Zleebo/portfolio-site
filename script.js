@@ -164,7 +164,7 @@ const PROJECTS = [
     title:       'Boss AI, JSON Phases',
     category:    'solo',
     badge:       'From Spite · SP6',
-    youtubeId:   'qDlzCvMWwbU',
+    youtubeId:   'AnT5G6SePOg',
     thumbnail:   null,
     role:        'Isolated Demo',
     tags:        ['C++', 'AI', 'State Machine'],
