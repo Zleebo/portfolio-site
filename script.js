@@ -194,8 +194,7 @@ function cardThumb(p) {
 
 /* YouTube embed URL with autoplay */
 function ytEmbed(id) {
-  return 'https://www.youtube-nocookie.com/embed/' + id +
-    '?autoplay=1&rel=0&modestbranding=1&color=white';
+  return 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
 }
 
 /* ── DOM refs ───────────────────────────────────────────────── */
