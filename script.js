@@ -34,7 +34,6 @@ const PROJECTS = [
     category:    'academic',
     badge:       'SP7 · 15 Weeks',
     youtubeId:   'gRYbjITB2rA',
-    video:       '27 - Namnlös video – Gjord med Clipchamp.mp4',
     thumbnail:   'assets/Bloom.jpg',
     role:        'Gameplay Programmer',
     tags:        ['C++', 'Custom Engine', 'FPS'],
@@ -48,7 +47,6 @@ const PROJECTS = [
     category:    'academic',
     badge:       'SP6 · 15 Weeks',
     youtubeId:   'iZQKJXCeg0Q',
-    video:       '25 - GamePlay.mp4',
     thumbnail:   'assets/p6_thumbnail.png',
     role:        'Gameplay Programmer',
     tags:        ['C++', 'Custom Engine', 'ARPG'],
@@ -62,7 +60,6 @@ const PROJECTS = [
     category:    'academic',
     badge:       'SP4 · 8 Weeks',
     youtubeId:   'PFRyD4OsWFs',
-    video:       '17 - Suspectre.mp4',
     thumbnail:   'assets/ShipWrecked.jpg',
     role:        'Gameplay Programmer',
     tags:        ['C++', 'TGE2D', 'Platformer'],
@@ -76,7 +73,6 @@ const PROJECTS = [
     category:    'academic',
     badge:       'SP3 · 8 Weeks',
     youtubeId:   'QrzTsEr8w0A',
-    video:       '07 - TGA21_-_Stockholm_-_Game_Project_#3_-_Curse_of_Decay_Trailer.mp4',
     thumbnail:   'assets/CurseOfDecayu.jpg',
     role:        'Gameplay Programmer',
     tags:        ['C++', 'TGE2D', 'Bullet Hell'],
@@ -90,7 +86,6 @@ const PROJECTS = [
     category:    'academic',
     badge:       'SP2 · 8 Weeks',
     youtubeId:   'Fnrkol5chSs',
-    video:       '09 - SP2_Grupp_5_Trailer_theSpyWhoBlobbedMe.mp4',
     thumbnail:   'assets/SpyWhoBlobbedMePhoto.jpg',
     role:        'Gameplay Programmer',
     tags:        ['Unity', 'Mobile', 'Puzzle'],
@@ -104,7 +99,6 @@ const PROJECTS = [
     category:    'academic',
     badge:       'SP1 · 8 Weeks',
     youtubeId:   'SWrEKuWJ2Mw',
-    video:       '02 - spelprojekt1_grupp6_kitCommander_trailerKompliterad.mp4',
     thumbnail:   'assets/Projekt1.jpg',
     role:        'Gameplay Programmer',
     tags:        ['Unity', 'Shooter'],
@@ -121,7 +115,6 @@ const PROJECTS = [
     category:    'solo',
     badge:       'From Spite · SP6',
     youtubeId:   '8Qy9YFrYkK8',
-    video:       '10 - EnemyFlocking.mp4',
     thumbnail:   null,
     role:        'Isolated Demo',
     tags:        ['C++', 'AI', 'Steering Behaviours'],
@@ -134,7 +127,6 @@ const PROJECTS = [
     category:    'solo',
     badge:       'From Spite · SP6',
     youtubeId:   'sofNZfpBcJg',
-    video:       '26 - NAVMESHNAVIGATIOn.mp4',
     thumbnail:   'assets/PortFolioAStarGifs.gif',
     role:        'Isolated Demo',
     tags:        ['C++', 'Pathfinding', 'NavMesh'],
@@ -147,7 +139,6 @@ const PROJECTS = [
     category:    'solo',
     badge:       'From Spite · SP6',
     youtubeId:   'qDlzCvMWwbU',
-    video:       '22 - Boss.mp4',
     thumbnail:   null,
     role:        'Isolated Demo',
     tags:        ['C++', 'AI', 'State Machine'],
@@ -160,7 +151,6 @@ const PROJECTS = [
     category:    'solo',
     badge:       'From B.L.O.O.M · SP7',
     youtubeId:   'rIREfan4TGY',
-    video:       '21 - EnemyTool.mp4',
     thumbnail:   null,
     role:        'Isolated Demo',
     tags:        ['C#', 'Unity', 'Tools Dev'],
@@ -173,7 +163,6 @@ const PROJECTS = [
     category:    'solo',
     badge:       'From B.L.O.O.M · SP7',
     youtubeId:   'PZyFZwpe9kc',
-    video:       '11 - Laser.mp4',
     thumbnail:   null,
     role:        'Isolated Demo',
     tags:        ['C++', 'TGE', 'Systems'],
@@ -186,7 +175,6 @@ const PROJECTS = [
     category:    'solo',
     badge:       'Personal',
     youtubeId:   '6FdnOi-YNCQ',
-    video:       '15 - MazeGame.mp4',
     thumbnail:   null,
     role:        'Personal Project',
     tags:        ['Unity', 'Mobile', 'Procedural Gen'],
@@ -236,24 +224,18 @@ function makeCard(p) {
   card.setAttribute('role', 'button');
   card.setAttribute('aria-label', 'Open ' + p.title);
 
-  /* Media: local video > local image thumbnail > empty */
+  /* Thumbnail: local image > YouTube thumbnail > empty */
   var thumb = cardThumb(p);
-  var hasMedia = p.video || thumb;
-  var mediaHtml;
-  if (p.video) {
-    mediaHtml = '<video src="' + asset(p.video) + '" muted loop playsinline preload="none"></video>';
-  } else if (thumb) {
-    mediaHtml = '<img src="' + thumb + '" alt="' + p.title + '" loading="lazy" />';
-  } else {
-    mediaHtml = '';
-  }
+  var mediaHtml = thumb
+    ? '<img src="' + thumb + '" alt="' + p.title + '" loading="lazy" />'
+    : '';
 
   var tagHtml = p.tags.slice(0, 2)
     .map(function(t) { return '<span class="card-tag ' + tagClass + '">' + t + '</span>'; })
     .join('');
 
   card.innerHTML =
-    '<div class="card-media' + (hasMedia ? '' : ' card-media--empty') + '">' +
+    '<div class="card-media' + (thumb ? '' : ' card-media--empty') + '">' +
       mediaHtml +
       '<span class="card-badge ' + badgeClass + '">' + p.badge + '</span>' +
       '<div class="card-overlay">' +
@@ -267,12 +249,6 @@ function makeCard(p) {
       '<h3 class="card-title">' + p.title + '</h3>' +
       '<p class="card-role">' + p.role + '</p>' +
     '</div>';
-
-  if (p.video) {
-    var vid = card.querySelector('video');
-    card.addEventListener('mouseenter', function() { vid.play(); });
-    card.addEventListener('mouseleave', function() { vid.pause(); });
-  }
 
   card.addEventListener('click', function() { openModal(p); });
   card.addEventListener('keydown', function(e) {
