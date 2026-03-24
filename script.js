@@ -33,7 +33,7 @@ const PROJECTS = [
     title:       'B.L.O.O.M',
     category:    'academic',
     badge:       'SP7 · 15 Weeks',
-    youtubeId:   'gRYbjITB2rA',
+    youtubeId:   null,
     thumbnail:   'assets/Bloom.jpg',
     role:        'Gameplay Programmer',
     tags:        ['C++', 'Custom Engine', 'FPS'],
