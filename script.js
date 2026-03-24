@@ -12,12 +12,17 @@ function asset(filename) {
 
 /* ══════════════════════════════════════════════════════════════
    PROJECT DATA
-   category : 'academic' = TGA group projects
-              'solo'     = feature demos + personal projects
-   badge    : card top-left label
-   engine   : shown in modal meta row
-   duration : shown in modal meta row
-   from     : for solo demos, which project they came from
+   category  : 'academic' = TGA group projects
+               'solo'     = feature demos + personal projects
+   badge     : card top-left label
+   engine    : shown in modal meta row
+   duration  : shown in modal meta row
+   from      : for solo demos, which project they came from
+   youtubeId : YouTube video ID — add after uploading as Unlisted.
+               Card will use YouTube thumbnail automatically.
+               Modal will autoplay the YouTube embed.
+               Example: 'dQw4w9WgXcQ' from youtube.com/watch?v=dQw4w9WgXcQ
+   thumbnail : local image override (used if set, else YouTube thumb)
    ══════════════════════════════════════════════════════════════ */
 const PROJECTS = [
 
@@ -28,8 +33,8 @@ const PROJECTS = [
     title:       'B.L.O.O.M',
     category:    'academic',
     badge:       'SP7 · 15 Weeks',
+    youtubeId:   'iZQKJXCeg0Q',
     thumbnail:   'assets/Bloom.jpg',
-    video:       asset('21 - EnemyTool.mp4'),
     role:        'Gameplay Programmer',
     tags:        ['C++', 'Custom Engine', 'FPS'],
     engine:      'TGE (Custom Engine)',
@@ -41,8 +46,8 @@ const PROJECTS = [
     title:       'Spite',
     category:    'academic',
     badge:       'SP6 · 15 Weeks',
+    youtubeId:   'gRYbjITB2rA',
     thumbnail:   'assets/p6_thumbnail.png',
-    video:       asset('25 - GamePlay.mp4'),
     role:        'Gameplay Programmer',
     tags:        ['C++', 'Custom Engine', 'ARPG'],
     engine:      'TGE (Custom Engine)',
@@ -54,8 +59,8 @@ const PROJECTS = [
     title:       'ShipWrecked',
     category:    'academic',
     badge:       'SP4 · 8 Weeks',
+    youtubeId:   null,
     thumbnail:   'assets/ShipWrecked.jpg',
-    video:       null,
     role:        'Gameplay Programmer',
     tags:        ['C++', 'TGE2D', 'Platformer'],
     engine:      'TGE2D (Custom Engine)',
@@ -67,8 +72,8 @@ const PROJECTS = [
     title:       'Curse of Decay',
     category:    'academic',
     badge:       'SP3 · 8 Weeks',
+    youtubeId:   'sofNZfpBcJg',
     thumbnail:   'assets/CurseOfDecayu.jpg',
-    video:       asset('07 - TGA21_-_Stockholm_-_Game_Project_#3_-_Curse_of_Decay_Trailer.mp4'),
     role:        'Gameplay Programmer',
     tags:        ['C++', 'TGE2D', 'Bullet Hell'],
     engine:      'TGE2D (Custom Engine)',
@@ -80,8 +85,8 @@ const PROJECTS = [
     title:       'The Spy Who Blobbed Me',
     category:    'academic',
     badge:       'SP2 · 8 Weeks',
+    youtubeId:   'kRkNKh_GkVg',
     thumbnail:   'assets/SpyWhoBlobbedMePhoto.jpg',
-    video:       asset('09 - SP2_Grupp_5_Trailer_theSpyWhoBlobbedMe.mp4'),
     role:        'Gameplay Programmer',
     tags:        ['Unity', 'Mobile', 'Puzzle'],
     engine:      'Unity',
@@ -93,8 +98,8 @@ const PROJECTS = [
     title:       'Kit Commander',
     category:    'academic',
     badge:       'SP1 · 8 Weeks',
+    youtubeId:   'Q5z5PiiVf5o',
     thumbnail:   'assets/Projekt1.jpg',
-    video:       asset('02 - spelprojekt1_grupp6_kitCommander_trailerKompliterad.mp4'),
     role:        'Gameplay Programmer',
     tags:        ['Unity', 'Shooter'],
     engine:      'Unity',
@@ -109,8 +114,8 @@ const PROJECTS = [
     title:       'Enemy Flocking AI',
     category:    'solo',
     badge:       'From Spite · SP6',
+    youtubeId:   'SWrEKuWJ2Mw',
     thumbnail:   null,
-    video:       asset('10 - EnemyFlocking.mp4'),
     role:        'Isolated Demo',
     tags:        ['C++', 'AI', 'Steering Behaviours'],
     from:        'Spite (SP6)',
@@ -121,8 +126,8 @@ const PROJECTS = [
     title:       'A* and NavMesh Navigation',
     category:    'solo',
     badge:       'From Spite · SP6',
+    youtubeId:   'PFRyD4OsWFs',
     thumbnail:   'assets/PortFolioAStarGifs.gif',
-    video:       asset('26 - NAVMESHNAVIGATIOn.mp4'),
     role:        'Isolated Demo',
     tags:        ['C++', 'Pathfinding', 'NavMesh'],
     from:        'Spite (SP6)',
@@ -133,8 +138,8 @@ const PROJECTS = [
     title:       'Boss AI, JSON Phases',
     category:    'solo',
     badge:       'From Spite · SP6',
+    youtubeId:   'qDlzCvMWwbU',
     thumbnail:   null,
-    video:       asset('22 - Boss.mp4'),
     role:        'Isolated Demo',
     tags:        ['C++', 'AI', 'State Machine'],
     from:        'Spite (SP6)',
@@ -145,8 +150,8 @@ const PROJECTS = [
     title:       'Enemy Path Tool',
     category:    'solo',
     badge:       'From B.L.O.O.M · SP7',
+    youtubeId:   'PZyFZwpe9kc',
     thumbnail:   null,
-    video:       asset('21 - EnemyTool.mp4'),
     role:        'Isolated Demo',
     tags:        ['C#', 'Unity', 'Tools Dev'],
     from:        'B.L.O.O.M (SP7)',
@@ -157,8 +162,8 @@ const PROJECTS = [
     title:       'Laser Hazard System',
     category:    'solo',
     badge:       'From B.L.O.O.M · SP7',
+    youtubeId:   '8Qy9YFrYkK8',
     thumbnail:   null,
-    video:       asset('11 - Laser.mp4'),
     role:        'Isolated Demo',
     tags:        ['C++', 'TGE', 'Systems'],
     from:        'B.L.O.O.M (SP7)',
@@ -169,63 +174,70 @@ const PROJECTS = [
     title:       'Infinite Maze Game',
     category:    'solo',
     badge:       'Personal',
+    youtubeId:   'Fnrkol5chSs',
     thumbnail:   null,
-    video:       asset('15 - MazeGame.mp4'),
     role:        'Personal Project',
     tags:        ['Unity', 'Mobile', 'Procedural Gen'],
-    description: 'A hyper-casual infinite maze mobile game built to explore maze generation algorithms. The maze generates from a 2D array of 1s and 0s converted to geometry, using a chunk system that spawns sections ahead and removes them behind the player. Features a pursuing black fog that kills both the player and enemies in the level, and time-activated spike hazards.'
+    description: 'A hyper-casual infinite maze mobile game built to explore maze generation algorithms. The maze generates from a 2D array of 1s and 0s converted to geometry, using a chunk system that spawns sections ahead and removes them behind the player. Features a pursuing black fog that kills both the player and enemies, and time-activated spike hazards.'
   }
 
 ];
 
-/* ── DOM refs ───────────────────────────────────────────────── */
-const gridAcademic  = document.getElementById('grid-academic');
-const gridSolo      = document.getElementById('grid-solo');
-const modal         = document.getElementById('modal');
-const modalClose    = document.getElementById('modal-close');
-const modalBackdrop = document.getElementById('modal-backdrop');
-const modalMedia    = document.getElementById('modal-media-wrap');
-const modalTags     = document.getElementById('modal-tags-row');
-const modalTitle    = document.getElementById('modal-title');
-const modalMeta     = document.getElementById('modal-meta');
-const modalRole     = document.getElementById('modal-role');
-const modalDesc     = document.getElementById('modal-desc');
-const nav           = document.getElementById('nav');
+/* ── Helpers ────────────────────────────────────────────────── */
 
-let activeVideo = null;
+/* Card thumbnail: local image > YouTube thumbnail > null */
+function cardThumb(p) {
+  if (p.thumbnail) return p.thumbnail;
+  if (p.youtubeId) return 'https://img.youtube.com/vi/' + p.youtubeId + '/maxresdefault.jpg';
+  return null;
+}
+
+/* YouTube embed URL with autoplay */
+function ytEmbed(id) {
+  return 'https://www.youtube-nocookie.com/embed/' + id +
+    '?autoplay=1&rel=0&modestbranding=1&color=white';
+}
+
+/* ── DOM refs ───────────────────────────────────────────────── */
+var gridAcademic  = document.getElementById('grid-academic');
+var gridSolo      = document.getElementById('grid-solo');
+var modal         = document.getElementById('modal');
+var modalClose    = document.getElementById('modal-close');
+var modalBackdrop = document.getElementById('modal-backdrop');
+var modalMedia    = document.getElementById('modal-media-wrap');
+var modalTags     = document.getElementById('modal-tags-row');
+var modalTitle    = document.getElementById('modal-title');
+var modalMeta     = document.getElementById('modal-meta');
+var modalRole     = document.getElementById('modal-role');
+var modalDesc     = document.getElementById('modal-desc');
+var nav           = document.getElementById('nav');
 
 /* ── Card factory ───────────────────────────────────────────── */
 function makeCard(p) {
-  const isAcademic = p.category === 'academic';
-  const tagClass   = isAcademic ? 'card-tag--purple' : 'card-tag--blue';
-  const badgeClass = isAcademic ? 'card-badge--purple' : 'card-badge--blue';
+  var isAcademic = p.category === 'academic';
+  var tagClass   = isAcademic ? 'card-tag--purple' : 'card-tag--blue';
+  var badgeClass = isAcademic ? 'card-badge--purple' : 'card-badge--blue';
 
-  const card = document.createElement('article');
+  var card = document.createElement('article');
   card.className = 'project-card fade-up';
   card.dataset.category = p.category;
   card.setAttribute('tabindex', '0');
   card.setAttribute('role', 'button');
   card.setAttribute('aria-label', 'Open ' + p.title);
 
-  const isGif    = p.thumbnail && p.thumbnail.toLowerCase().endsWith('.gif');
-  const hasVideo = !!p.video;
-  let mediaHtml  = '';
+  /* Thumbnail: local image, YouTube thumb, or empty */
+  var thumb = cardThumb(p);
+  var isGif = thumb && thumb.toLowerCase().endsWith('.gif');
+  var mediaHtml = thumb
+    ? '<img src="' + thumb + '" alt="' + p.title + '" loading="lazy" />'
+    : '';
 
-  if (isGif) {
-    mediaHtml = '<img src="' + p.thumbnail + '" alt="' + p.title + '" loading="lazy" />';
-  } else if (hasVideo) {
-    const poster = p.thumbnail ? 'poster="' + p.thumbnail + '"' : '';
-    mediaHtml = '<video src="' + p.video + '" ' + poster + ' muted loop playsinline preload="none"></video>';
-  } else if (p.thumbnail) {
-    mediaHtml = '<img src="' + p.thumbnail + '" alt="' + p.title + '" loading="lazy" />';
-  }
-
-  const tagHtml = p.tags.slice(0, 2)
+  var tagHtml = p.tags.slice(0, 2)
     .map(function(t) { return '<span class="card-tag ' + tagClass + '">' + t + '</span>'; })
     .join('');
 
   card.innerHTML =
-    '<div class="card-media">' +
+    '<div class="card-media' + (thumb ? '' : ' card-media--empty') + '">' +
       mediaHtml +
       '<span class="card-badge ' + badgeClass + '">' + p.badge + '</span>' +
       '<div class="card-overlay">' +
@@ -239,14 +251,6 @@ function makeCard(p) {
       '<h3 class="card-title">' + p.title + '</h3>' +
       '<p class="card-role">' + p.role + '</p>' +
     '</div>';
-
-  if (hasVideo && !isGif) {
-    const vid = card.querySelector('video');
-    if (vid) {
-      card.addEventListener('mouseenter', function() { vid.play().catch(function() {}); });
-      card.addEventListener('mouseleave', function() { vid.pause(); vid.currentTime = 0; });
-    }
-  }
 
   card.addEventListener('click', function() { openModal(p); });
   card.addEventListener('keydown', function(e) {
@@ -266,27 +270,38 @@ function renderSection(container, category) {
       card.style.setProperty('--delay', (i * 0.06) + 's');
       container.appendChild(card);
     });
-  container.querySelectorAll('.fade-up').forEach(function(el) { revealObserver.observe(el); });
+  container.querySelectorAll('.fade-up').forEach(function(el) {
+    revealObserver.observe(el);
+  });
 }
 
 /* ── Modal open ─────────────────────────────────────────────── */
 function openModal(p) {
   modalMedia.innerHTML = '';
 
-  if (p.video) {
-    var v = document.createElement('video');
-    v.src = p.video;
-    v.controls = true;
-    v.muted = true;
-    v.autoplay = true;
-    v.playsinline = true;
-    modalMedia.appendChild(v);
-    activeVideo = v;
-  } else if (p.thumbnail) {
-    var img = document.createElement('img');
-    img.src = p.thumbnail;
-    img.alt = p.title;
-    modalMedia.appendChild(img);
+  if (p.youtubeId) {
+    /* YouTube embed — autoplays after user click */
+    var iframe = document.createElement('iframe');
+    iframe.src = ytEmbed(p.youtubeId);
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+    iframe.setAttribute('allowfullscreen', '');
+    modalMedia.appendChild(iframe);
+  } else {
+    /* Fallback: show thumbnail or placeholder */
+    var thumb = cardThumb(p);
+    if (thumb && !thumb.toLowerCase().endsWith('.gif')) {
+      var img = document.createElement('img');
+      img.src = thumb;
+      img.alt = p.title;
+      img.style.opacity = '0.5';
+      modalMedia.appendChild(img);
+    }
+    /* Show "upload to YouTube" notice */
+    var notice = document.createElement('div');
+    notice.className = 'modal-no-video';
+    notice.textContent = 'Video coming soon';
+    modalMedia.appendChild(notice);
   }
 
   var tagClass = p.category === 'academic' ? 'card-tag--purple' : 'card-tag--blue';
@@ -320,13 +335,15 @@ function closeModal() {
   modal.classList.remove('open');
   modal.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
-  if (activeVideo) { activeVideo.pause(); activeVideo = null; }
+  /* Destroy iframe to stop playback */
   setTimeout(function() { modalMedia.innerHTML = ''; }, 380);
 }
 
 modalClose.addEventListener('click', closeModal);
 modalBackdrop.addEventListener('click', closeModal);
-document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
 
 /* ── Intersection Observer ──────────────────────────────────── */
 var revealObserver = new IntersectionObserver(function(entries) {
@@ -338,7 +355,9 @@ var revealObserver = new IntersectionObserver(function(entries) {
   });
 }, { threshold: 0.08 });
 
-document.querySelectorAll('.fade-up').forEach(function(el) { revealObserver.observe(el); });
+document.querySelectorAll('.fade-up').forEach(function(el) {
+  revealObserver.observe(el);
+});
 
 /* ── Nav scroll ─────────────────────────────────────────────── */
 window.addEventListener('scroll', function() {

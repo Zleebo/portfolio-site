@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Hugo Ehrman, Gameplay Programmer at Starbreeze Studios. C++ game systems, AI, pathfinding." />
+  <meta name="description" content="Hugo Ehrman, Gameplay Programmer at Starbreeze Studios. Payday 3. C++ game systems, AI, pathfinding." />
   <title>Hugo Ehrman, Gameplay Programmer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,6 +16,7 @@
   <nav id="nav">
     <a href="#hero" class="nav-logo">HE</a>
     <ul class="nav-links">
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -34,32 +35,36 @@
       <h1 class="hero-name">Hugo<br />Ehrman</h1>
       <p class="hero-tagline">Building the systems that make games feel <em>alive</em></p>
       <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#experience" class="btn btn-primary">View Experience</a>
         <a href="assets/Gameplay%20Programmer%20-%20Hugo%20Ehrman.pdf" class="btn btn-ghost" download>Download CV</a>
       </div>
     </div>
-    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+    <a href="#experience" class="scroll-hint" aria-label="Scroll down">
       <div class="scroll-arrow"></div>
     </a>
   </section>
 
-  <!-- About -->
-  <section id="about" class="section">
+  <!-- Experience -->
+  <section id="experience" class="section">
     <div class="container">
 
-      <!-- Starbreeze featured banner -->
-      <div class="sb-banner fade-up">
-        <div class="sb-status">
-          <span class="sb-dot" aria-hidden="true"></span>
-          Currently at
-        </div>
-        <div class="sb-divider" aria-hidden="true"></div>
-        <div class="sb-main">
-          <div>
-            <p class="sb-company">Starbreeze Studios</p>
-            <p class="sb-role">Gameplay Programmer</p>
+      <div class="section-header fade-up">
+        <span class="label">Industry</span>
+        <h2>Experience</h2>
+      </div>
+
+      <div class="exp-company-row fade-up">
+        <div class="exp-company-info">
+          <div class="exp-active">
+            <span class="exp-dot" aria-hidden="true"></span>
+            Currently employed
           </div>
-          <div class="sb-tags">
+          <h3 class="exp-company-name">Starbreeze Studios</h3>
+          <p class="exp-company-role">Gameplay Programmer</p>
+        </div>
+        <div class="exp-company-meta">
+          <span class="exp-period">2023 &ndash; Present</span>
+          <div class="exp-stack">
             <span>Unreal Engine 5</span>
             <span>C++</span>
             <span>Blueprint</span>
@@ -67,15 +72,60 @@
         </div>
       </div>
 
+      <div class="exp-games fade-up" style="--delay: 0.1s">
+
+        <div class="exp-game-card">
+          <div class="exp-game-top">
+            <span class="exp-status exp-status--released">Released</span>
+            <span class="exp-year">2023</span>
+          </div>
+          <h4 class="exp-game-title">Payday 3</h4>
+          <p class="exp-game-genre">Heist FPS &middot; Starbreeze Studios</p>
+          <p class="exp-game-desc">
+            Add a sentence or two about what you worked on in Payday 3.
+            What systems did you implement? What was your specific contribution?
+          </p>
+          <div class="exp-game-tags">
+            <span>Unreal Engine 5</span>
+            <span>C++</span>
+            <span>Blueprint</span>
+          </div>
+        </div>
+
+        <div class="exp-game-card">
+          <div class="exp-game-top">
+            <span class="exp-status exp-status--dev">In Development</span>
+          </div>
+          <h4 class="exp-game-title">Baxter</h4>
+          <p class="exp-game-genre">Starbreeze Studios</p>
+          <p class="exp-game-desc">
+            Add a sentence or two about what you are working on in Baxter.
+            What have you built? What problems have you solved?
+          </p>
+          <div class="exp-game-tags">
+            <span>Unreal Engine 5</span>
+            <span>C++</span>
+            <span>Blueprint</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section section-alt">
+    <div class="container">
       <div class="about-layout">
-        <div class="about-text fade-up" style="--delay: 0.1s">
+        <div class="about-text fade-up">
           <span class="label">About</span>
           <h2>Crafting Systems<br />That Feel Right</h2>
-          <p>I'm a gameplay programmer currently at <strong>Starbreeze Studios</strong>, where I joined through an internship and have continued working since. Day-to-day I work in Unreal Engine 5 with C++ and Blueprint on a live production team.</p>
-          <p>My foundation is <strong>The Game Assembly Stockholm</strong>, where I completed 7 games in 2 years. I specialise in AI behaviour, pathfinding, combat, and the tools that help the whole team move faster.</p>
+          <p>I'm a gameplay programmer currently at <strong>Starbreeze Studios</strong>, where I joined through an internship and have continued working since. Before that, I trained at <strong>The Game Assembly Stockholm</strong>, completing 7 games in 2 years.</p>
+          <p>I specialise in AI behaviour, pathfinding, combat systems, and the tools that help the whole team move faster. I got into programming through Unity, and have been building game systems ever since.</p>
           <a href="assets/Gameplay%20Programmer%20-%20Hugo%20Ehrman.pdf" class="btn btn-primary" download>Download CV</a>
         </div>
-        <div class="about-skills fade-up" style="--delay: 0.2s">
+        <div class="about-skills fade-up" style="--delay: 0.15s">
           <div class="skill-section">
             <h4>Languages</h4>
             <div class="tag-row">
@@ -108,12 +158,11 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="section section-alt">
+  <section id="projects" class="section">
     <div class="container">
 
       <div class="section-header fade-up">
@@ -121,7 +170,6 @@
         <h2>Projects</h2>
       </div>
 
-      <!-- TGA Group Projects -->
       <div class="project-chapter">
         <div class="chapter-header fade-up">
           <div class="chapter-text">
@@ -134,7 +182,6 @@
         <div class="project-grid" id="grid-academic"></div>
       </div>
 
-      <!-- Solo / Feature Demos -->
       <div class="project-chapter">
         <div class="chapter-header fade-up">
           <div class="chapter-text">
@@ -150,11 +197,11 @@
   </section>
 
   <!-- Contact -->
-  <footer id="contact" class="section">
+  <footer id="contact" class="section section-alt">
     <div class="container text-center fade-up">
       <span class="label">Contact</span>
       <h2>Let's Work Together</h2>
-      <p class="contact-sub">Open to new opportunities in gameplay and AI programming. Let's talk.</p>
+      <p class="contact-sub">Open to new opportunities in gameplay and AI programming.</p>
       <a href="mailto:hugo.ehrman@gmail.com" class="btn btn-primary contact-email">hugo.ehrman@gmail.com</a>
       <div class="social-row">
         <a href="https://github.com/Zleebo" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">

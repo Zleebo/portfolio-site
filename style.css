@@ -256,76 +256,155 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.15; }
   border-radius: 2px;
 }
 
-/* ── Starbreeze banner ──────────────────────────────────────── */
-.sb-banner {
+/* ── Experience section ─────────────────────────────────────── */
+.exp-company-row {
   display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 22px 28px;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 32px;
   border: 1px solid var(--border-blue);
-  background: linear-gradient(135deg, rgba(96,165,250,0.07) 0%, rgba(167,139,250,0.04) 100%);
+  background: linear-gradient(135deg, rgba(96,165,250,0.06), rgba(167,139,250,0.03));
   border-radius: var(--radius-lg);
-  margin-bottom: 64px;
+  margin-bottom: 20px;
   flex-wrap: wrap;
 }
-.sb-status {
+.exp-active {
   display: flex;
   align-items: center;
   gap: 8px;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.72rem;
+  font-size: 0.71rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent);
-  white-space: nowrap;
-  flex-shrink: 0;
+  color: #4ade80;
+  margin-bottom: 10px;
 }
-.sb-dot {
+.exp-dot {
   width: 7px; height: 7px;
   border-radius: 50%;
   background: #4ade80;
-  box-shadow: 0 0 0 0 rgba(74,222,128,0.4);
   animation: pulse 2s ease infinite;
   flex-shrink: 0;
 }
-.sb-divider {
-  width: 1px;
-  height: 36px;
-  background: var(--border);
+.exp-company-name {
+  font-size: 1.625rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.exp-company-role {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+.exp-company-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
   flex-shrink: 0;
 }
-.sb-main {
+.exp-period {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+.exp-stack {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.exp-stack span {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-blue);
+  background: rgba(96,165,250,0.08);
+  color: var(--accent);
+}
+
+/* Game credit cards */
+.exp-games {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.exp-game-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 30px;
+  transition: border-color var(--t), box-shadow var(--t);
+}
+.exp-game-card:hover {
+  border-color: var(--border-blue);
+  box-shadow: 0 8px 32px rgba(96,165,250,0.08);
+}
+.exp-game-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex: 1;
-  gap: 20px;
-  flex-wrap: wrap;
+  margin-bottom: 14px;
 }
-.sb-company {
-  font-size: 1.1875rem;
+.exp-status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.69rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+.exp-status--released {
+  color: #4ade80;
+  background: rgba(74,222,128,0.1);
+  border: 1px solid rgba(74,222,128,0.3);
+}
+.exp-status--dev {
+  color: var(--accent);
+  background: rgba(96,165,250,0.1);
+  border: 1px solid var(--border-blue);
+}
+.exp-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+.exp-game-title {
+  font-size: 1.875rem;
   font-weight: 700;
-  color: var(--text);
-  line-height: 1.2;
+  line-height: 1.1;
+  margin-bottom: 4px;
 }
-.sb-role {
+.exp-game-genre {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.exp-game-desc {
   font-size: 0.9375rem;
   color: var(--text-muted);
-  margin-top: 3px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-style: italic;
 }
-.sb-tags {
+.exp-game-tags {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
 }
-.sb-tags span {
-  font-size: 0.8125rem;
+.exp-game-tags span {
+  font-size: 0.78rem;
   font-weight: 500;
-  padding: 5px 13px;
-  border-radius: 6px;
+  padding: 4px 11px;
+  border-radius: 5px;
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.03);
   color: var(--text-muted);
 }
 
@@ -468,6 +547,9 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.15; }
   overflow: hidden;
   background: #080816;
 }
+.card-media--empty {
+  background: linear-gradient(135deg, #0d0d20, #080816);
+}
 .card-media video,
 .card-media img {
   width: 100%; height: 100%;
@@ -594,8 +676,24 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.15; }
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   background: #050510;
 }
-.modal-media-wrap video { width: 100%; height: 100%; object-fit: contain; background: #050510; }
-.modal-media-wrap img  { width: 100%; height: 100%; object-fit: contain; }
+.modal-media-wrap video  { width: 100%; height: 100%; object-fit: contain; background: #050510; }
+.modal-media-wrap img   { width: 100%; height: 100%; object-fit: contain; }
+.modal-media-wrap iframe {
+  width: 100%; height: 100%;
+  border: none; display: block;
+}
+.modal-no-video {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  color: var(--text-dim);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.05em;
+}
+.modal-media-wrap { position: relative; }
 .modal-info { padding: 28px 32px 36px; }
 .modal-tags-row { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 16px; }
 .modal-info h2 { font-size: 1.875rem; margin-bottom: 6px; }
