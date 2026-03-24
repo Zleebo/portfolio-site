@@ -78,7 +78,7 @@ const PROJECTS = [
     tags:        ['Unity', 'Action-Adventure', 'Top-Down'],
     engine:      'Unity',
     duration:    '8 Weeks',
-    description: 'A Zelda-inspired top-down action-adventure game developed in Unity over 8 weeks. I implemented slime enemies with multiple variants: melee, ranged, and a divide behaviour that splits a slime into smaller ones on death.'
+    description: 'A Zelda-inspired top-down action-adventure game developed in Unity over 8 weeks. Among my contributions were slime enemies with multiple variants: melee, ranged, and a divide behaviour that splits a slime into smaller ones on death.'
   },
   {
     id:          'shipwrecked',
