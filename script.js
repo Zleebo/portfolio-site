@@ -29,11 +29,24 @@ const PROJECTS = [
   /* TGA Group Projects (reverse chronological) */
 
   {
+    id:          'scrapped',
+    title:       'Scrapped',
+    category:    'academic',
+    badge:       'GP8 · 8 Weeks',
+    youtubeId:   '-WP-PNvkDtM',
+    thumbnail:   null,
+    role:        'Gameplay Programmer',
+    tags:        ['UE5', 'C++', 'Co-op'],
+    engine:      'Unreal Engine 5',
+    duration:    '8 Weeks',
+    description: 'A split-screen co-op game inspired by It Takes Two, developed in Unreal Engine 5 over 8 weeks.'
+  },
+  {
     id:          'bloom',
     title:       'B.L.O.O.M',
     category:    'academic',
     badge:       'SP7 · 15 Weeks',
-    youtubeId:   null,
+    youtubeId:   '7pfMT4nNikI',
     thumbnail:   'assets/Bloom.jpg',
     role:        'Gameplay Programmer',
     tags:        ['C++', 'Custom Engine', 'FPS'],
@@ -46,7 +59,7 @@ const PROJECTS = [
     title:       'Spite',
     category:    'academic',
     badge:       'SP6 · 15 Weeks',
-    youtubeId:   'iZQKJXCeg0Q',
+    youtubeId:   'lHfOQk_Q4rI',
     thumbnail:   'assets/p6_thumbnail.png',
     role:        'Gameplay Programmer',
     tags:        ['C++', 'Custom Engine', 'ARPG'],
@@ -55,11 +68,24 @@ const PROJECTS = [
     description: 'A Diablo-like action RPG developed over 15 weeks. I implemented three enemy types (melee attacker, a large stomp enemy, and a ranged attacker), a boid-based flocking system to prevent enemies and the player from clipping through each other, A* pathfinding with a funnel algorithm across the NavMesh for smooth agent movement, and a six-phase boss whose attack patterns are loaded from JSON files, letting level designers create and modify them without code changes.'
   },
   {
+    id:          'suspectre',
+    title:       'Suspectre',
+    category:    'academic',
+    badge:       'GP5 · 8 Weeks',
+    youtubeId:   'ijQQQ5rgamU',
+    thumbnail:   null,
+    role:        'Gameplay Programmer',
+    tags:        ['Unity', 'Action-Adventure', 'Top-Down'],
+    engine:      'Unity',
+    duration:    '8 Weeks',
+    description: 'A Zelda-inspired top-down action-adventure game developed in Unity over 8 weeks.'
+  },
+  {
     id:          'shipwrecked',
     title:       'ShipWrecked',
     category:    'academic',
     badge:       'SP4 · 8 Weeks',
-    youtubeId:   'PFRyD4OsWFs',
+    youtubeId:   null,
     thumbnail:   'assets/ShipWrecked.jpg',
     role:        'Gameplay Programmer',
     tags:        ['C++', 'TGE2D', 'Platformer'],
