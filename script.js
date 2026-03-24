@@ -39,7 +39,7 @@ const PROJECTS = [
     tags:        ['UE5', 'C++', 'Co-op'],
     engine:      'Unreal Engine 5',
     duration:    '8 Weeks',
-    description: 'A split-screen co-op game inspired by It Takes Two, developed in Unreal Engine 5 over 8 weeks.'
+    description: 'A split-screen co-op game inspired by It Takes Two, developed in Unreal Engine 5 over 8 weeks. I implemented charging enemies that pursue and attack the player.'
   },
   {
     id:          'bloom',
@@ -78,7 +78,7 @@ const PROJECTS = [
     tags:        ['Unity', 'Action-Adventure', 'Top-Down'],
     engine:      'Unity',
     duration:    '8 Weeks',
-    description: 'A Zelda-inspired top-down action-adventure game developed in Unity over 8 weeks.'
+    description: 'A Zelda-inspired top-down action-adventure game developed in Unity over 8 weeks. I implemented slime enemies with multiple variants: melee, ranged, and a divide behaviour that splits a slime into smaller ones on death.'
   },
   {
     id:          'shipwrecked',
