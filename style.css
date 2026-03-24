@@ -418,6 +418,12 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.15; }
   font-size: 0.85rem;
   color: var(--accent);
   font-family: var(--font-mono);
+  margin-bottom: 4px;
+}
+.exp-game-period {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
   margin-bottom: 14px;
 }
 .exp-game-desc {
