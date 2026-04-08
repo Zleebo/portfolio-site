@@ -3,211 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Hugo Ehrman, Gameplay Programmer at Starbreeze Studios. Payday 3. C++ game systems, AI, pathfinding." />
-  <title>Hugo Ehrman, Gameplay Programmer</title>
+  <meta name="description" content="Hugo Ehrman, gameplay programmer at Starbreeze Studios. PAYDAY 3, NPC behavior, gameplay code, debug tooling, and pathfinding in C++ and Unreal Engine." />
+  <meta name="theme-color" content="#05070a" />
+  <title>Hugo Ehrman | Gameplay Programmer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23020304'/><text x='16' y='22' font-family='serif' font-size='17' font-weight='700' fill='%23d4a055' text-anchor='middle'>HE</text></svg>">
 </head>
 <body>
+  <div class="site-noise" aria-hidden="true"></div>
 
-  <!-- Nav -->
-  <nav id="nav">
-    <a href="#hero" class="nav-logo">HE</a>
-    <ul class="nav-links">
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="assets/Gameplay%20Programmer%20-%20Hugo%20Ehrman.pdf" class="btn btn-sm btn-ghost nav-cv" download>Download CV</a>
-  </nav>
+  <header class="site-header">
+    <nav id="nav" class="nav container">
+      <a href="#hero" class="nav-logo" aria-label="Home">HE</a>
+      <ul class="nav-links">
+        <li><a href="#hero">Overview</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="assets/Gameplay%20Programmer%20-%20Hugo%20Ehrman.pdf" class="btn btn-outline nav-cv" download>CV</a>
+    </nav>
+  </header>
 
-  <!-- Hero -->
-  <section id="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source src="assets/12%20-%20FrontVideo.mp4" type="video/mp4" />
-    </video>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-eyebrow">Gameplay Programmer &middot; Starbreeze Studios</p>
-      <h1 class="hero-name">Hugo<br />Ehrman</h1>
-      <p class="hero-tagline">AI systems, combat, and tools in C++ and Unreal Engine</p>
-      <div class="hero-cta">
-        <a href="#experience" class="btn btn-primary">View Experience</a>
-        <a href="assets/Gameplay%20Programmer%20-%20Hugo%20Ehrman.pdf" class="btn btn-ghost" download>Download CV</a>
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-media" aria-hidden="true">
       </div>
-    </div>
-    <a href="#experience" class="scroll-hint" aria-label="Scroll down">
-      <div class="scroll-arrow"></div>
-    </a>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" class="section">
-    <div class="container">
-
-      <div class="section-header fade-up">
-        <span class="label">Industry</span>
-        <h2>Experience</h2>
-      </div>
-
-      <div class="exp-company-row fade-up">
-        <div class="exp-company-info">
-          <div class="exp-active">
-            <span class="exp-dot" aria-hidden="true"></span>
-            Currently employed
+      <div class="container hero-layout">
+        <div class="hero-copy panel fade-up">
+          <p class="kicker">Gameplay Programmer / Starbreeze Studios</p>
+          <h1 class="hero-title">Hugo Ehrman</h1>
+          <p class="hero-strap">C++, Unreal, NPC behavior, gameplay code, and debug tooling.</p>
+          <div class="hero-actions">
+            <a href="#experience" class="btn btn-solid">Experience</a>
+            <a href="assets/Gameplay%20Programmer%20-%20Hugo%20Ehrman.pdf" class="btn btn-outline" download>Download CV</a>
+            <a href="mailto:hugo.ehrman@gmail.com" class="btn btn-ghost">Email</a>
           </div>
-          <h3 class="exp-company-name">Starbreeze Studios</h3>
-          <p class="exp-company-role">Gameplay Programmer</p>
         </div>
-        <div class="exp-company-meta">
-          <span class="exp-period">2023 &ndash; Present</span>
-          <div class="exp-stack">
+
+        <aside class="hero-side fade-up" style="--delay: 0.08s;" aria-label="Current role and highlights">
+          <section class="status-card panel">
+            <p class="panel-label">Current Project</p>
+            <h2 class="status-title">PAYDAY 3</h2>
+            <p class="status-role">Gameplay Programmer / NPC Behavior</p>
+            <ul class="status-list">
+              <li><span>Type</span><strong>Live-service co-op FPS</strong></li>
+              <li><span>Focus</span><strong>NPC behavior, gameplay code, tooling</strong></li>
+              <li><span>Stack</span><strong>C++, Unreal, GAS, replication</strong></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-alt">
+      <div class="container experience-surface fade-up">
+        <article class="employer-card panel">
+          <div class="employer-top">
+            <p class="kicker">Studio</p>
+            <span class="employer-range">2.5 years</span>
+          </div>
+          <h2>Starbreeze Studios</h2>
+          <p class="employer-role">Gameplay Programmer</p>
+          <p class="employer-copy">
+            NPC behavior, gameplay code, and debugging tools across PAYDAY 3 and Project Baxter.
+          </p>
+          <div class="stack-list" aria-label="Core tools and technologies">
             <span>Unreal Engine 5</span>
             <span>C++</span>
             <span>Blueprint</span>
+            <span>Gameplay Ability System</span>
           </div>
-        </div>
+        </article>
+
+        <section class="credits-panel panel" aria-label="Recent credits">
+          <p class="kicker">Recent Credits</p>
+          <div class="credits-grid">
+            <article class="credit-card">
+              <div class="credit-head">
+                <span class="credit-status credit-status--live">Live Service</span>
+                <span class="credit-year">2025 - Present</span>
+              </div>
+              <h3>PAYDAY 3</h3>
+              <p class="credit-subtitle">Co-op Heist FPS</p>
+              <p class="credit-role">Gameplay Programmer / NPC Behavior</p>
+              <p class="credit-summary">
+                Current work on the live game across gameplay-side NPC behavior systems, support work, and production debugging in a shipped co-op heist FPS.
+              </p>
+              <div class="credit-tags">
+                <span>C++</span>
+                <span>UE4</span>
+                <span>GAS</span>
+              </div>
+            </article>
+
+            <article class="credit-card">
+              <div class="credit-head">
+                <span class="credit-status">Cancelled</span>
+                <span class="credit-year">2023 - 2025</span>
+              </div>
+              <h3>Project Baxter</h3>
+              <p class="credit-subtitle">Dungeons &amp; Dragons</p>
+              <p class="credit-role">Gameplay Programmer</p>
+              <p class="credit-summary">
+                Cancelled Dungeons &amp; Dragons project in Unreal Engine 5, built as a cross-play multiplayer game with a live-service model.
+              </p>
+              <div class="credit-tags">
+                <span>C++</span>
+                <span>UE5</span>
+                <span>GAS</span>
+              </div>
+            </article>
+          </div>
+        </section>
       </div>
+    </section>
 
-      <div class="exp-games-section fade-up" style="--delay: 0.1s">
-        <h4 class="exp-games-heading">Worked on at Starbreeze</h4>
-        <div class="exp-games">
+    <section id="projects" class="section">
+      <div class="container">
+        <header class="section-head fade-up">
+          <p class="kicker">Projects</p>
+          <h2>Older work and experiments.</h2>
+          <p class="section-intro">
+            School projects and focused technical demos from The Game Assembly.
+          </p>
+        </header>
 
-          <div class="exp-game-card">
-            <div class="exp-game-top">
-              <span class="exp-status exp-status--released">Released</span>
-              <span class="exp-year">2023</span>
+        <section class="project-chapter fade-up">
+          <header class="chapter-header">
+            <div>
+              <p class="chapter-kicker">The Game Assembly</p>
+              <h3>Team Projects</h3>
+              <p>Group projects across Unity, Unreal, and custom C++ engines.</p>
             </div>
-            <h4 class="exp-game-title">Payday 3</h4>
-            <p class="exp-game-genre">Heist FPS</p>
-            <p class="exp-game-role">Gameplay Programmer (AI &amp; Systems)</p>
-            <p class="exp-game-period">Oct 2025 &ndash; Present</p>
-            <p class="exp-game-desc">
-              A cooperative first-person heist shooter where players take on the role of the Payday Gang in New York City, choosing how to approach missions through stealth, full aggression, or hostage negotiation.
-            </p>
-            <div class="exp-game-tags">
-              <span>C++</span>
-              <span>UE4</span>
-              <span>GAS</span>
-            </div>
-          </div>
+          </header>
+          <div class="project-grid" id="grid-academic"></div>
+        </section>
 
-          <div class="exp-game-card">
-            <div class="exp-game-top">
-              <span class="exp-status exp-status--cancelled">Cancelled</span>
+        <section class="project-chapter fade-up" style="--delay: 0.08s;">
+          <header class="chapter-header">
+            <div>
+              <p class="chapter-kicker chapter-kicker--solo">Personal Work</p>
+              <h3>Focused Systems</h3>
+              <p>Smaller demos and isolated systems pulled out from larger projects.</p>
             </div>
-            <h4 class="exp-game-title">Baxter</h4>
-            <p class="exp-game-genre">Co-op Action</p>
-            <p class="exp-game-role">Gameplay Programmer (AI &amp; Systems)</p>
-            <p class="exp-game-period">Aug 2023 &ndash; Oct 2025 &middot; 2 years</p>
-            <p class="exp-game-desc">
-              An unreleased four-player co-op action game set in the Dungeons &amp; Dragons universe, developed in Unreal Engine 5.
-            </p>
-            <div class="exp-game-tags">
-              <span>C++</span>
-              <span>UE5</span>
-              <span>GAS</span>
-            </div>
-          </div>
-
-        </div>
+          </header>
+          <div class="project-grid" id="grid-solo"></div>
+        </section>
       </div>
+    </section>
+  </main>
 
-    </div>
-  </section>
+  <footer id="contact" class="section section-alt contact">
+    <div class="container contact-layout fade-up">
+      <p class="kicker">Contact</p>
+      <h2>For gameplay programming roles, you can reach me here.</h2>
+      <p class="contact-sub">The CV has the full background. This site is mainly here for project context.</p>
+      <a href="mailto:hugo.ehrman@gmail.com" class="btn btn-solid contact-email">hugo.ehrman@gmail.com</a>
 
-  <!-- About -->
-  <section id="about" class="section section-alt">
-    <div class="container">
-      <div class="about-layout">
-        <div class="about-text fade-up">
-          <span class="label">About</span>
-          <h2>Crafting Systems<br />That Feel Right</h2>
-          <p>I'm a gameplay programmer currently at <strong>Starbreeze Studios</strong>, where I joined through an internship and have continued working since. Before that, I trained at <strong>The Game Assembly Stockholm</strong>, completing 7 games in 2 years.</p>
-          <p>I specialise in AI behaviour, pathfinding, combat systems, and the tools that help the whole team move faster. I got into programming through Unity, and have been building game systems ever since.</p>
-          <a href="assets/Gameplay%20Programmer%20-%20Hugo%20Ehrman.pdf" class="btn btn-primary" download>Download CV</a>
-        </div>
-        <div class="about-skills fade-up" style="--delay: 0.15s">
-          <div class="skill-section">
-            <h4>Languages</h4>
-            <div class="tag-row">
-              <span class="tag">C++</span>
-              <span class="tag">Blueprint</span>
-              <span class="tag">C#</span>
-              <span class="tag">HLSL</span>
-            </div>
-          </div>
-          <div class="skill-section">
-            <h4>Engines &amp; Tools</h4>
-            <div class="tag-row">
-              <span class="tag">Unreal Engine 5</span>
-              <span class="tag">Unity</span>
-              <span class="tag">TGE (Custom)</span>
-              <span class="tag">Visual Studio</span>
-              <span class="tag">Perforce</span>
-              <span class="tag">Git</span>
-            </div>
-          </div>
-          <div class="skill-section">
-            <h4>Specialties</h4>
-            <div class="tag-row">
-              <span class="tag accent">Gameplay Systems</span>
-              <span class="tag accent">AI &amp; Pathfinding</span>
-              <span class="tag accent">Combat Programming</span>
-              <span class="tag accent">Behaviour Trees</span>
-              <span class="tag accent">Tools Development</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <div class="container">
-
-      <div class="section-header fade-up">
-        <span class="label">Work</span>
-        <h2>Projects</h2>
-      </div>
-
-      <div class="project-chapter">
-        <div class="chapter-header fade-up">
-          <div class="chapter-text">
-            <span class="chapter-kicker">The Game Assembly Stockholm</span>
-            <h3 class="chapter-title">Group Projects</h3>
-            <p class="chapter-desc">8 games completed across 2 years of study, each delivered under game-jam-style deadlines with a full cross-discipline team. Projects range from 8-week Unity games to 15-week titles on a custom C++ engine, including one in Unreal Engine 5.</p>
-          </div>
-          <span class="chapter-year">2021 – 2023</span>
-        </div>
-        <div class="project-grid" id="grid-academic"></div>
-      </div>
-
-      <div class="project-chapter">
-        <div class="chapter-header fade-up">
-          <div class="chapter-text">
-            <span class="chapter-kicker chapter-kicker--blue">Solo Work</span>
-            <h3 class="chapter-title">Feature Demos &amp; Personal Projects</h3>
-            <p class="chapter-desc">Isolated demos of specific systems built within group projects, plus personal work, showing the individual contributions behind the games above.</p>
-          </div>
-        </div>
-        <div class="project-grid" id="grid-solo"></div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <footer id="contact" class="section section-alt">
-    <div class="container text-center fade-up">
-      <span class="label">Contact</span>
-      <h2>Let's Work Together</h2>
-      <p class="contact-sub">Open to new opportunities in gameplay and AI programming.</p>
-      <a href="mailto:hugo.ehrman@gmail.com" class="btn btn-primary contact-email">hugo.ehrman@gmail.com</a>
       <div class="social-row">
         <a href="https://github.com/Zleebo" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -220,15 +176,15 @@
           </svg>
         </a>
       </div>
-      <p class="footer-copy">&copy; 2026 Hugo Ehrman</p>
+
+      <p class="footer-copy">&copy; <span id="year">2026</span> Hugo Ehrman</p>
     </div>
   </footer>
 
-  <!-- Modal -->
   <div id="modal" class="modal" aria-hidden="true">
     <div class="modal-backdrop" id="modal-backdrop"></div>
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" id="modal-close" aria-label="Close">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc" tabindex="-1">
+      <button class="modal-close" id="modal-close" aria-label="Close project details">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
           <path d="M1 1l14 14M15 1L1 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>

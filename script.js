@@ -1,393 +1,585 @@
-/* ═══════════════════════════════════════════════════════════
-   Hugo Ehrman Portfolio
-   ═══════════════════════════════════════════════════════════ */
-
-/* ── Asset path encoder ─────────────────────────────────────── */
-function asset(filename) {
-  return 'assets/' + filename
-    .replace(/ /g,  '%20')
-    .replace(/#/g,  '%23')
-    .replace(/\?/g, '%3F');
-}
-
-/* ══════════════════════════════════════════════════════════════
-   PROJECT DATA
-   category  : 'academic' = TGA group projects
-               'solo'     = feature demos + personal projects
-   badge     : card top-left label
-   engine    : shown in modal meta row
-   duration  : shown in modal meta row
-   from      : for solo demos, which project they came from
-   youtubeId : YouTube video ID — add after uploading as Unlisted.
-               Card will use YouTube thumbnail automatically.
-               Modal will autoplay the YouTube embed.
-               Example: 'dQw4w9WgXcQ' from youtube.com/watch?v=dQw4w9WgXcQ
-   thumbnail : local image override (used if set, else YouTube thumb)
-   ══════════════════════════════════════════════════════════════ */
 const PROJECTS = [
-
-  /* TGA Group Projects (reverse chronological) */
-
   {
-    id:          'scrapped',
-    title:       'Scrapped',
-    category:    'academic',
-    badge:       'GP8 · 8 Weeks',
-    youtubeId:   '-WP-PNvkDtM',
-    thumbnail:   null,
-    role:        'Gameplay Programmer',
-    tags:        ['UE5', 'AngelScript', 'Co-op'],
-    engine:      'Unreal Engine 5',
-    duration:    '8 Weeks',
-    description: 'A split-screen co-op game inspired by It Takes Two, developed in Unreal Engine 5 over 8 weeks using AngelScript. My contributions included charging enemies and hazard movables, among other gameplay systems.'
+    id: 'scrapped',
+    title: 'Scrapped',
+    category: 'academic',
+    badge: 'GP8 / 8 Weeks',
+    youtubeId: '-WP-PNvkDtM',
+    thumbnail: null,
+    role: 'Gameplay Programmer',
+    tags: ['UE5', 'AngelScript', 'Co-op'],
+    engine: 'Unreal Engine 5',
+    duration: '8 Weeks',
+    description: 'A split-screen co-op game inspired by It Takes Two, developed in Unreal Engine 5 over 8 weeks using AngelScript. My contributions included charging enemies and moving hazards.'
   },
   {
-    id:          'bloom',
-    title:       'B.L.O.O.M',
-    category:    'academic',
-    badge:       'SP7 · 15 Weeks',
-    youtubeId:   '7pfMT4nNikI',
-    thumbnail:   'assets/Bloom.jpg',
-    role:        'Gameplay Programmer',
-    tags:        ['C++', 'Custom Engine', 'FPS'],
-    engine:      'TGE (Custom Engine)',
-    duration:    '15 Weeks',
-    description: 'A first-person shooter inspired by Metroid Prime, developed over 15 weeks. My contributions: a behaviour tree system driving complex enemy AI logic; a robot enemy with patrol, seek, and attack states; a level-designer-friendly path editor tool built in C# inside Unity (the team\'s level editor) so designers could create and visualise patrol routes without needing to touch code; and a configurable laser hazard that reads its two endpoints from the editor data.'
+    id: 'bloom',
+    title: 'B.L.O.O.M',
+    category: 'academic',
+    badge: 'SP7 / 15 Weeks',
+    youtubeId: '7pfMT4nNikI',
+    thumbnail: 'assets/Bloom.jpg',
+    role: 'Gameplay Programmer',
+    tags: ['C++', 'Custom Engine', 'FPS'],
+    engine: 'TGE (Custom Engine)',
+    duration: '15 Weeks',
+    description: 'A first-person shooter inspired by Metroid Prime, developed over 15 weeks. I built a behavior tree system for enemy AI, a robot enemy with patrol, seek, and attack states, a Unity path editor for designers, and a configurable laser hazard using editor-defined endpoints.'
   },
   {
-    id:          'spite',
-    title:       'Spite',
-    category:    'academic',
-    badge:       'SP6 · 15 Weeks',
-    youtubeId:   'lHfOQk_Q4rI',
-    thumbnail:   'assets/p6_thumbnail.png',
-    role:        'Gameplay Programmer',
-    tags:        ['C++', 'Custom Engine', 'ARPG'],
-    engine:      'TGE (Custom Engine)',
-    duration:    '15 Weeks',
-    description: 'A Diablo-like action RPG developed over 15 weeks. I implemented three enemy types (melee attacker, a large stomp enemy, and a ranged attacker), a boid-based flocking system to prevent enemies and the player from clipping through each other, A* pathfinding with a funnel algorithm across the NavMesh for smooth agent movement, and a six-phase boss whose attack patterns are loaded from JSON files, letting level designers create and modify them without code changes.'
+    id: 'spite',
+    title: 'Spite',
+    category: 'academic',
+    badge: 'SP6 / 15 Weeks',
+    youtubeId: 'lHfOQk_Q4rI',
+    thumbnail: 'assets/p6_thumbnail.png',
+    role: 'Gameplay Programmer',
+    tags: ['C++', 'Custom Engine', 'ARPG'],
+    engine: 'TGE (Custom Engine)',
+    duration: '15 Weeks',
+    description: 'A Diablo-like action RPG developed over 15 weeks. I implemented three enemy types, boid-based flocking to avoid clipping, A* pathfinding with funnel smoothing on NavMesh data, and a six-phase boss with JSON-driven attack patterns for designer iteration.'
   },
   {
-    id:          'suspectre',
-    title:       'Suspectre',
-    category:    'academic',
-    badge:       'GP5 · 8 Weeks',
-    youtubeId:   'ijQQQ5rgamU',
-    thumbnail:   null,
-    role:        'Gameplay Programmer',
-    tags:        ['Unity', 'Action-Adventure', 'Top-Down'],
-    engine:      'Unity',
-    duration:    '8 Weeks',
-    description: 'A Zelda-inspired top-down action-adventure game developed in Unity over 8 weeks. Among my contributions were slime enemies with multiple variants: melee, ranged, and a divide behaviour that splits a slime into smaller ones on death.'
+    id: 'suspectre',
+    title: 'Suspectre',
+    category: 'academic',
+    badge: 'GP5 / 8 Weeks',
+    youtubeId: 'ijQQQ5rgamU',
+    thumbnail: null,
+    role: 'Gameplay Programmer',
+    tags: ['Unity', 'Top-Down', 'Action Adventure'],
+    engine: 'Unity',
+    duration: '8 Weeks',
+    description: 'A Zelda-inspired top-down action-adventure game developed in Unity over 8 weeks. I built slime enemies with multiple variants, including melee, ranged, and split-on-death behavior.'
   },
   {
-    id:          'shipwrecked',
-    title:       'ShipWrecked',
-    category:    'academic',
-    badge:       'SP4 · 8 Weeks',
-    youtubeId:   null,
-    thumbnail:   'assets/ShipWrecked.jpg',
-    role:        'Gameplay Programmer',
-    tags:        ['C++', 'TGE2D', 'Platformer'],
-    engine:      'TGE2D (Custom Engine)',
-    duration:    '8 Weeks',
-    description: 'A Celeste-inspired platformer built in TGE2D over 8 weeks. My contributions included the enemy follow behaviour, back-and-forth hazard movement, camera tracking, and fixing loading issues.'
+    id: 'shipwrecked',
+    title: 'ShipWrecked',
+    category: 'academic',
+    badge: 'SP4 / 8 Weeks',
+    youtubeId: null,
+    thumbnail: 'assets/ShipWrecked.jpg',
+    role: 'Gameplay Programmer',
+    tags: ['C++', 'TGE2D', 'Platformer'],
+    engine: 'TGE2D (Custom Engine)',
+    duration: '8 Weeks',
+    description: 'A Celeste-inspired platformer built in TGE2D over 8 weeks. My contributions included enemy follow behavior, moving hazards, camera tracking, and loading fixes.'
   },
   {
-    id:          'curse-of-decay',
-    title:       'Curse of Decay',
-    category:    'academic',
-    badge:       'SP3 · 8 Weeks',
-    youtubeId:   'QrzTsEr8w0A',
-    thumbnail:   'assets/CurseOfDecayu.jpg',
-    role:        'Gameplay Programmer',
-    tags:        ['C++', 'TGE2D', 'Bullet Hell'],
-    engine:      'TGE2D (Custom Engine)',
-    duration:    '8 Weeks',
-    description: 'A side-scrolling bullet hell game developed in TGE2D over 8 weeks. I was responsible for the boss enemy, the enemy loading system, level select, a damage blink effect, and the loading systems for pickups and player values.'
+    id: 'curse-of-decay',
+    title: 'Curse of Decay',
+    category: 'academic',
+    badge: 'SP3 / 8 Weeks',
+    youtubeId: 'QrzTsEr8w0A',
+    thumbnail: 'assets/CurseOfDecayu.jpg',
+    role: 'Gameplay Programmer',
+    tags: ['C++', 'TGE2D', 'Bullet Hell'],
+    engine: 'TGE2D (Custom Engine)',
+    duration: '8 Weeks',
+    description: 'A side-scrolling bullet hell game developed in TGE2D over 8 weeks. I was responsible for the boss enemy, enemy loading systems, level select, a damage blink effect, and loading of pickups and player values.'
   },
   {
-    id:          'spy-who-blobbed-me',
-    title:       'The Spy Who Blobbed Me',
-    category:    'academic',
-    badge:       'SP2 · 8 Weeks',
-    youtubeId:   'Fnrkol5chSs',
-    thumbnail:   'assets/SpyWhoBlobbedMePhoto.jpg',
-    role:        'Gameplay Programmer',
-    tags:        ['Unity', 'Mobile', 'Puzzle'],
-    engine:      'Unity',
-    duration:    '8 Weeks',
-    description: 'A top-down mobile puzzle game developed in Unity over 8 weeks, where the player navigates levels and solves puzzles to eliminate a target. My contributions included draggable interactables, touch input handling, enemy and collectable systems, and character animations.'
+    id: 'spy-who-blobbed-me',
+    title: 'The Spy Who Blobbed Me',
+    category: 'academic',
+    badge: 'SP2 / 8 Weeks',
+    youtubeId: 'Fnrkol5chSs',
+    thumbnail: 'assets/SpyWhoBlobbedMePhoto.jpg',
+    role: 'Gameplay Programmer',
+    tags: ['Unity', 'Mobile', 'Puzzle'],
+    engine: 'Unity',
+    duration: '8 Weeks',
+    description: 'A top-down mobile puzzle game developed in Unity over 8 weeks. I built draggable interactables, touch input handling, enemy and collectable systems, and character animations.'
   },
   {
-    id:          'kit-commander',
-    title:       'Kit Commander',
-    category:    'academic',
-    badge:       'SP1 · 8 Weeks',
-    youtubeId:   'SWrEKuWJ2Mw',
-    thumbnail:   'assets/Projekt1.jpg',
-    role:        'Gameplay Programmer',
-    tags:        ['Unity', 'Shooter'],
-    engine:      'Unity',
-    duration:    '8 Weeks',
-    description: 'A Starfox-inspired on-rails shooter developed in Unity over 8 weeks, my first group project at TGA. My contributions included the UI, a GameManager that persists player data across levels, collectable systems, health and damage, bouncing off walls, and a fix for a floating-point precision error affecting movement over time.'
-  },
-
-  /* Solo Work: Feature Demos and Personal Projects */
-
-  {
-    id:          'flocking',
-    title:       'Enemy Flocking AI',
-    category:    'solo',
-    badge:       'From Spite · SP6',
-    youtubeId:   '8Qy9YFrYkK8',
-    thumbnail:   null,
-    role:        'Isolated Demo',
-    tags:        ['C++', 'AI', 'Steering Behaviours'],
-    from:        'Spite (SP6)',
-    description: 'Built in Spite to solve enemies and the player walking through each other. Three boid steering rules (separation, cohesion, and alignment) produce coordinated group movement for enemy squads while keeping entities from overlapping. The system runs on both enemies and the player simultaneously.'
+    id: 'kit-commander',
+    title: 'Kit Commander',
+    category: 'academic',
+    badge: 'SP1 / 8 Weeks',
+    youtubeId: 'SWrEKuWJ2Mw',
+    thumbnail: 'assets/Projekt1.jpg',
+    role: 'Gameplay Programmer',
+    tags: ['Unity', 'Shooter'],
+    engine: 'Unity',
+    duration: '8 Weeks',
+    description: 'A Starfox-inspired on-rails shooter developed in Unity over 8 weeks, my first group project at TGA. I worked on UI, a persistent GameManager, collectables, health and damage, wall bounce behavior, and a movement precision bug fix.'
   },
   {
-    id:          'astar-navmesh',
-    title:       'A* and NavMesh Navigation',
-    category:    'solo',
-    badge:       'From Spite · SP6',
-    youtubeId:   'sofNZfpBcJg',
-    thumbnail:   'assets/PortFolioAStarGifs.gif',
-    role:        'Isolated Demo',
-    tags:        ['C++', 'Pathfinding', 'NavMesh'],
-    from:        'Spite (SP6)',
-    description: 'Pathfinding system built for Spite. A* finds the shortest route across the NavMesh, and a string-pulling funnel algorithm smooths the resulting path for natural, fluid agent movement. Handles multiple simultaneous agents navigating complex environments.'
+    id: 'flocking',
+    title: 'Enemy Flocking AI',
+    category: 'solo',
+    badge: 'From Spite / SP6',
+    youtubeId: '8Qy9YFrYkK8',
+    thumbnail: null,
+    role: 'Isolated Demo',
+    tags: ['C++', 'AI', 'Steering Behaviors'],
+    from: 'Spite (SP6)',
+    description: 'Built in Spite to solve agents walking through each other. Separation, cohesion, and alignment rules produce coordinated movement while keeping enemies and the player from overlapping.'
   },
   {
-    id:          'boss-ai',
-    title:       'Boss AI, JSON Phases',
-    category:    'solo',
-    badge:       'From Spite · SP6',
-    youtubeId:   'AnT5G6SePOg',
-    thumbnail:   null,
-    role:        'Isolated Demo',
-    tags:        ['C++', 'AI', 'State Machine'],
-    from:        'Spite (SP6)',
-    description: 'Six-phase boss for Spite where each phase\'s attack patterns are loaded from JSON files, allowing level designers to author and iterate on patterns without touching code. The boss evaluates player position to select appropriate attacks, keeping each phase distinct.'
+    id: 'astar-navmesh',
+    title: 'A* and NavMesh Navigation',
+    category: 'solo',
+    badge: 'From Spite / SP6',
+    youtubeId: 'sofNZfpBcJg',
+    thumbnail: 'assets/PortFolioAStarGifs.gif',
+    role: 'Isolated Demo',
+    tags: ['C++', 'Pathfinding', 'NavMesh'],
+    from: 'Spite (SP6)',
+    description: 'Pathfinding system built for Spite. A* finds shortest routes on NavMesh data and a funnel pass smooths paths for cleaner and more natural agent movement, including multi-agent scenarios.'
   },
   {
-    id:          'enemy-tool',
-    title:       'Enemy Path Tool',
-    category:    'solo',
-    badge:       'From B.L.O.O.M · SP7',
-    youtubeId:   'rIREfan4TGY',
-    thumbnail:   null,
-    role:        'Isolated Demo',
-    tags:        ['C#', 'Unity', 'Tools Dev'],
-    from:        'B.L.O.O.M (SP7)',
-    description: 'A level-design tool built in C# inside Unity, which was the team\'s level editor for B.L.O.O.M. Designers place and reorder patrol waypoints visually in Unity; the path data is then read into TGE at runtime so the enemy follows the configured route. No programmer involvement needed to create or adjust patrol paths.'
+    id: 'boss-ai',
+    title: 'Boss AI, JSON Phases',
+    category: 'solo',
+    badge: 'From Spite / SP6',
+    youtubeId: 'AnT5G6SePOg',
+    thumbnail: null,
+    role: 'Isolated Demo',
+    tags: ['C++', 'AI', 'State Machine'],
+    from: 'Spite (SP6)',
+    description: 'Six-phase boss system where attack patterns are loaded from JSON. Designers can author and iterate phase behavior without code changes while the boss still reacts to player position in real time.'
   },
   {
-    id:          'laser',
-    title:       'Laser Hazard System',
-    category:    'solo',
-    badge:       'From B.L.O.O.M · SP7',
-    youtubeId:   'PZyFZwpe9kc',
-    thumbnail:   null,
-    role:        'Isolated Demo',
-    tags:        ['C++', 'TGE', 'Systems'],
-    from:        'B.L.O.O.M (SP7)',
-    description: 'A configurable laser hazard for B.L.O.O.M that sweeps between two positions defined in the Unity level editor. Fully data-driven: level designers place and configure each instance independently, allowing the same code to produce unique setups across different rooms.'
+    id: 'enemy-tool',
+    title: 'Enemy Path Tool',
+    category: 'solo',
+    badge: 'From B.L.O.O.M / SP7',
+    youtubeId: 'rIREfan4TGY',
+    thumbnail: null,
+    role: 'Isolated Demo',
+    tags: ['C#', 'Unity', 'Tools Dev'],
+    from: 'B.L.O.O.M (SP7)',
+    description: 'A level-design tool built in C# inside Unity, which was the team level editor for B.L.O.O.M. Designers place and reorder patrol waypoints visually and the runtime reads that data directly for enemy behavior.'
   },
   {
-    id:          'maze-game',
-    title:       'Infinite Maze Game',
-    category:    'solo',
-    badge:       'Personal',
-    youtubeId:   '6FdnOi-YNCQ',
-    thumbnail:   null,
-    role:        'Personal Project',
-    tags:        ['Unity', 'Mobile', 'Procedural Gen'],
-    description: 'A hyper-casual infinite maze mobile game built to explore maze generation algorithms. The maze generates from a 2D array of 1s and 0s converted to geometry, using a chunk system that spawns sections ahead and removes them behind the player. Features a pursuing black fog that kills both the player and enemies, and time-activated spike hazards.'
+    id: 'laser',
+    title: 'Laser Hazard System',
+    category: 'solo',
+    badge: 'From B.L.O.O.M / SP7',
+    youtubeId: 'PZyFZwpe9kc',
+    thumbnail: null,
+    role: 'Isolated Demo',
+    tags: ['C++', 'TGE', 'Systems'],
+    from: 'B.L.O.O.M (SP7)',
+    description: 'A configurable laser hazard for B.L.O.O.M that sweeps between two editor-defined points. The feature is fully data-driven, so level designers can create varied setups without new code.'
+  },
+  {
+    id: 'maze-game',
+    title: 'Infinite Maze Game',
+    category: 'solo',
+    badge: 'Personal',
+    youtubeId: '6FdnOi-YNCQ',
+    thumbnail: null,
+    role: 'Personal Project',
+    tags: ['Unity', 'Mobile', 'Procedural Generation'],
+    from: null,
+    description: 'A hyper-casual infinite maze mobile game used to explore procedural generation. The world streams through chunk spawning and cleanup, with hazards and enemy pressure systems layered on top.'
   }
-
 ];
 
-/* ── Helpers ────────────────────────────────────────────────── */
+const gridAcademic = document.getElementById('grid-academic');
+const gridSolo = document.getElementById('grid-solo');
+const modal = document.getElementById('modal');
+const modalDialog = document.querySelector('.modal-dialog');
+const modalClose = document.getElementById('modal-close');
+const modalBackdrop = document.getElementById('modal-backdrop');
+const modalMedia = document.getElementById('modal-media-wrap');
+const modalTags = document.getElementById('modal-tags-row');
+const modalTitle = document.getElementById('modal-title');
+const modalMeta = document.getElementById('modal-meta');
+const modalRole = document.getElementById('modal-role');
+const modalDesc = document.getElementById('modal-desc');
+const nav = document.getElementById('nav');
+const footerYear = document.getElementById('year');
+const pageRegions = Array.from(document.querySelectorAll('.site-header, main, footer'));
+const heroVideo = document.querySelector('.hero-video');
 
-/* Card thumbnail: local image > YouTube thumbnail > null */
-function cardThumb(p) {
-  if (p.thumbnail) return p.thumbnail;
-  if (p.youtubeId) return 'https://img.youtube.com/vi/' + p.youtubeId + '/maxresdefault.jpg';
+let revealObserver = null;
+let lastFocusedElement = null;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function createNode(tag, className, text) {
+  const element = document.createElement(tag);
+  if (className) {
+    element.className = className;
+  }
+  if (typeof text === 'string') {
+    element.textContent = text;
+  }
+  return element;
+}
+
+function getCardThumb(project) {
+  if (project.thumbnail) {
+    return project.thumbnail;
+  }
+  if (project.youtubeId) {
+    return 'https://img.youtube.com/vi/' + project.youtubeId + '/maxresdefault.jpg';
+  }
   return null;
 }
 
-/* YouTube embed URL with autoplay */
-function ytEmbed(id) {
-  return 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+function getFallbackThumb(project) {
+  return 'https://img.youtube.com/vi/' + project.youtubeId + '/hqdefault.jpg';
 }
 
-/* ── DOM refs ───────────────────────────────────────────────── */
-var gridAcademic  = document.getElementById('grid-academic');
-var gridSolo      = document.getElementById('grid-solo');
-var modal         = document.getElementById('modal');
-var modalClose    = document.getElementById('modal-close');
-var modalBackdrop = document.getElementById('modal-backdrop');
-var modalMedia    = document.getElementById('modal-media-wrap');
-var modalTags     = document.getElementById('modal-tags-row');
-var modalTitle    = document.getElementById('modal-title');
-var modalMeta     = document.getElementById('modal-meta');
-var modalRole     = document.getElementById('modal-role');
-var modalDesc     = document.getElementById('modal-desc');
-var nav           = document.getElementById('nav');
+function getYoutubeEmbed(id) {
+  return 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1';
+}
 
-/* ── Card factory ───────────────────────────────────────────── */
-function makeCard(p) {
-  var isAcademic = p.category === 'academic';
-  var tagClass   = isAcademic ? 'card-tag--purple' : 'card-tag--blue';
-  var badgeClass = isAcademic ? 'card-badge--purple' : 'card-badge--blue';
+function getModalFocusableElements() {
+  return Array.from(
+    modal.querySelectorAll(
+      'a[href], button:not([disabled]), iframe, input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    )
+  );
+}
 
-  var card = document.createElement('article');
-  card.className = 'project-card fade-up';
-  card.dataset.category = p.category;
+function setBackgroundInteractivity(isModalOpen) {
+  pageRegions.forEach(function(region) {
+    if (isModalOpen) {
+      region.dataset.previousAriaHidden = region.getAttribute('aria-hidden') || '';
+      region.setAttribute('aria-hidden', 'true');
+      region.inert = true;
+      return;
+    }
+
+    if (region.dataset.previousAriaHidden) {
+      region.setAttribute('aria-hidden', region.dataset.previousAriaHidden);
+    } else {
+      region.removeAttribute('aria-hidden');
+    }
+
+    delete region.dataset.previousAriaHidden;
+    region.inert = false;
+  });
+}
+
+function trapModalFocus(event) {
+  if (!modal.classList.contains('open') || event.key !== 'Tab') {
+    return;
+  }
+
+  const focusableElements = getModalFocusableElements();
+
+  if (!focusableElements.length) {
+    event.preventDefault();
+    modalDialog.focus();
+    return;
+  }
+
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+
+  if (!modal.contains(document.activeElement)) {
+    event.preventDefault();
+    firstElement.focus();
+    return;
+  }
+
+  if (event.shiftKey && (document.activeElement === firstElement || document.activeElement === modalDialog)) {
+    event.preventDefault();
+    lastElement.focus();
+    return;
+  }
+
+  if (!event.shiftKey && document.activeElement === lastElement) {
+    event.preventDefault();
+    firstElement.focus();
+  }
+}
+
+function observeReveal(element) {
+  if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+    element.classList.add('visible');
+    return;
+  }
+
+  if (!revealObserver) {
+    revealObserver = new IntersectionObserver(
+      function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12
+      }
+    );
+  }
+
+  revealObserver.observe(element);
+}
+
+function buildProjectCard(project, index) {
+  const card = createNode('article', 'project-card project-card--' + project.category + ' fade-up');
+  const serial = String(index + 1).padStart(2, '0');
+  const thumb = getCardThumb(project);
+
   card.setAttribute('tabindex', '0');
   card.setAttribute('role', 'button');
-  card.setAttribute('aria-label', 'Open ' + p.title);
+  card.setAttribute('aria-label', 'Open project details for ' + project.title);
+  card.style.setProperty('--delay', Math.min(index * 0.05, 0.3) + 's');
 
-  /* Thumbnail: local image > YouTube thumbnail > empty */
-  var thumb = cardThumb(p);
-  var mediaHtml = thumb
-    ? '<img src="' + thumb + '" alt="' + p.title + '" loading="lazy" />'
-    : '';
+  const media = createNode('div', 'project-card__media');
+  if (!thumb) {
+    media.classList.add('project-card__media-fallback');
+  }
 
-  var tagHtml = p.tags.slice(0, 2)
-    .map(function(t) { return '<span class="card-tag ' + tagClass + '">' + t + '</span>'; })
-    .join('');
+  if (thumb) {
+    const image = createNode('img', 'project-card__image');
+    image.src = thumb;
+    image.alt = project.title;
+    image.loading = 'lazy';
 
-  card.innerHTML =
-    '<div class="card-media' + (thumb ? '' : ' card-media--empty') + '">' +
-      mediaHtml +
-      '<span class="card-badge ' + badgeClass + '">' + p.badge + '</span>' +
-      '<div class="card-overlay">' +
-        '<div class="play-btn">' +
-          '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>' +
-        '</div>' +
-      '</div>' +
-    '</div>' +
-    '<div class="card-info">' +
-      '<div class="card-tags">' + tagHtml + '</div>' +
-      '<h3 class="card-title">' + p.title + '</h3>' +
-      '<p class="card-role">' + p.role + '</p>' +
-    '</div>';
+    if (project.youtubeId && !project.thumbnail) {
+      image.addEventListener('error', function() {
+        image.src = getFallbackThumb(project);
+      }, { once: true });
+    }
 
-  card.addEventListener('click', function() { openModal(p); });
-  card.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(p); }
+    media.appendChild(image);
+  }
+
+  const badge = createNode('span', 'project-card__badge', project.badge);
+  const play = createNode('span', 'project-card__play');
+  play.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>';
+
+  media.appendChild(badge);
+  media.appendChild(play);
+
+  const body = createNode('div', 'project-card__body');
+  const meta = createNode('div', 'project-card__meta');
+  const serialNode = createNode('span', 'project-card__serial', serial);
+  const roleNode = createNode('span', 'project-card__role', project.role);
+  const title = createNode('h3', 'project-card__title', project.title);
+  const tags = createNode('div', 'project-card__tags');
+
+  project.tags.slice(0, 3).forEach(function(tag) {
+    tags.appendChild(createNode('span', 'project-card__tag', tag));
   });
+
+  meta.appendChild(serialNode);
+  meta.appendChild(roleNode);
+  body.appendChild(meta);
+  body.appendChild(title);
+  body.appendChild(tags);
+
+  card.appendChild(media);
+  card.appendChild(body);
+
+  card.addEventListener('click', function() {
+    openModal(project);
+  });
+
+  card.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openModal(project);
+    }
+  });
+
+  observeReveal(card);
 
   return card;
 }
 
-/* ── Render sections ────────────────────────────────────────── */
 function renderSection(container, category) {
-  container.innerHTML = '';
-  PROJECTS
-    .filter(function(p) { return p.category === category; })
-    .forEach(function(p, i) {
-      var card = makeCard(p);
-      card.style.setProperty('--delay', (i * 0.06) + 's');
-      container.appendChild(card);
-    });
-  container.querySelectorAll('.fade-up').forEach(function(el) {
-    revealObserver.observe(el);
+  if (!container) {
+    return;
+  }
+
+  const fragment = document.createDocumentFragment();
+  const sectionProjects = PROJECTS.filter(function(project) {
+    return project.category === category;
   });
+
+  sectionProjects.forEach(function(project, index) {
+    fragment.appendChild(buildProjectCard(project, index));
+  });
+
+  container.innerHTML = '';
+  container.appendChild(fragment);
 }
 
-/* ── Modal open ─────────────────────────────────────────────── */
-function openModal(p) {
+function buildModalMedia(project) {
   modalMedia.innerHTML = '';
 
-  if (p.youtubeId) {
-    /* YouTube embed — autoplays after user click */
-    var iframe = document.createElement('iframe');
-    iframe.src = ytEmbed(p.youtubeId);
-    iframe.setAttribute('frameborder', '0');
+  if (project.youtubeId) {
+    const iframe = document.createElement('iframe');
+    iframe.src = getYoutubeEmbed(project.youtubeId);
+    iframe.title = project.title + ' video';
     iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
     iframe.setAttribute('allowfullscreen', '');
     modalMedia.appendChild(iframe);
-  } else {
-    /* Fallback: show thumbnail or placeholder */
-    var thumb = cardThumb(p);
-    if (thumb && !thumb.toLowerCase().endsWith('.gif')) {
-      var img = document.createElement('img');
-      img.src = thumb;
-      img.alt = p.title;
-      img.style.opacity = '0.5';
-      modalMedia.appendChild(img);
-    }
-    /* Show "upload to YouTube" notice */
-    var notice = document.createElement('div');
-    notice.className = 'modal-no-video';
-    notice.textContent = 'Video coming soon';
-    modalMedia.appendChild(notice);
+    return;
   }
 
-  var tagClass = p.category === 'academic' ? 'card-tag--purple' : 'card-tag--blue';
-  modalTags.innerHTML = p.tags
-    .map(function(t) { return '<span class="card-tag ' + tagClass + '">' + t + '</span>'; })
-    .join('');
+  const thumb = getCardThumb(project);
+  if (thumb) {
+    const image = createNode('img', '', null);
+    image.src = thumb;
+    image.alt = project.title;
+    modalMedia.appendChild(image);
+    return;
+  }
 
-  modalTitle.textContent = p.title;
-
-  var metas = [];
-  if (p.engine)   metas.push(p.engine);
-  if (p.duration) metas.push(p.duration);
-  if (p.from)     metas.push('Part of ' + p.from);
-  modalMeta.innerHTML = metas
-    .map(function(m) { return '<span class="modal-meta-item">' + m + '</span>'; })
-    .join('');
-
-  modalRole.textContent = p.role;
-  modalDesc.textContent = p.description;
-
-  modal.classList.toggle('academic', p.category === 'academic');
-  modal.classList.add('open');
-  modal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-  requestAnimationFrame(function() { modalClose.focus(); });
+  const message = createNode('div', 'modal-no-video', 'Video Coming Soon');
+  modalMedia.appendChild(message);
 }
 
-/* ── Modal close ────────────────────────────────────────────── */
+function openModal(project) {
+  lastFocusedElement = document.activeElement;
+
+  buildModalMedia(project);
+
+  modalTags.innerHTML = '';
+  project.tags.forEach(function(tag) {
+    const tagNode = createNode('span', 'modal-tag', tag);
+    tagNode.classList.add(project.category === 'academic' ? 'modal-tag--academic' : 'modal-tag--solo');
+    modalTags.appendChild(tagNode);
+  });
+
+  modalTitle.textContent = project.title;
+
+  const metaItems = [];
+  if (project.engine) {
+    metaItems.push(project.engine);
+  }
+  if (project.duration) {
+    metaItems.push(project.duration);
+  }
+  if (project.from) {
+    metaItems.push('Part of ' + project.from);
+  }
+
+  modalMeta.innerHTML = '';
+  metaItems.forEach(function(item) {
+    modalMeta.appendChild(createNode('span', 'modal-meta-item', item));
+  });
+
+  modalRole.textContent = project.role;
+  modalDesc.textContent = project.description;
+
+  modal.classList.toggle('academic', project.category === 'academic');
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+  setBackgroundInteractivity(true);
+
+  window.requestAnimationFrame(function() {
+    modalClose.focus();
+  });
+}
+
 function closeModal() {
-  if (!modal.classList.contains('open')) return;
+  if (!modal.classList.contains('open')) {
+    return;
+  }
+
   modal.classList.remove('open');
   modal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-  /* Destroy iframe to stop playback */
-  setTimeout(function() { modalMedia.innerHTML = ''; }, 380);
+  document.body.classList.remove('modal-open');
+  setBackgroundInteractivity(false);
+
+  window.setTimeout(function() {
+    modalMedia.innerHTML = '';
+  }, 260);
+
+  if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+    lastFocusedElement.focus();
+  }
+}
+
+function initNavigationState() {
+  const links = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+  const sections = links
+    .map(function(link) {
+      const id = link.getAttribute('href').slice(1);
+      return document.getElementById(id);
+    })
+    .filter(Boolean);
+
+  function updateHeaderState() {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  }
+
+  function updateActiveLink() {
+    const currentY = window.scrollY + window.innerHeight * 0.36;
+    let activeId = sections.length ? sections[0].id : '';
+
+    sections.forEach(function(section) {
+      if (section.offsetTop <= currentY) {
+        activeId = section.id;
+      }
+    });
+
+    links.forEach(function(link) {
+      const isActive = link.getAttribute('href') === '#' + activeId;
+      link.classList.toggle('is-active', isActive);
+    });
+  }
+
+  window.addEventListener('scroll', function() {
+    updateHeaderState();
+    updateActiveLink();
+  }, { passive: true });
+
+  window.addEventListener('resize', updateActiveLink);
+
+  updateHeaderState();
+  updateActiveLink();
+}
+
+function initStaticReveals() {
+  document.querySelectorAll('.fade-up').forEach(function(element) {
+    observeReveal(element);
+  });
+}
+
+function initFooterYear() {
+  if (!footerYear) {
+    return;
+  }
+  footerYear.textContent = String(new Date().getFullYear());
+}
+
+function initHeroVideo() {
+  if (!heroVideo) {
+    return;
+  }
+
+  heroVideo.addEventListener('loadedmetadata', function() {
+    try {
+      if (heroVideo.currentTime < 0.1) {
+        heroVideo.currentTime = 0.1;
+      }
+    } catch (error) {
+      return;
+    }
+  }, { once: true });
+
+  heroVideo.play().catch(function() {
+    return;
+  });
 }
 
 modalClose.addEventListener('click', closeModal);
 modalBackdrop.addEventListener('click', closeModal);
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeModal();
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeModal();
+    return;
+  }
+
+  trapModalFocus(event);
 });
 
-/* ── Intersection Observer ──────────────────────────────────── */
-var revealObserver = new IntersectionObserver(function(entries) {
-  entries.forEach(function(entry) {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.08 });
-
-document.querySelectorAll('.fade-up').forEach(function(el) {
-  revealObserver.observe(el);
-});
-
-/* ── Nav scroll ─────────────────────────────────────────────── */
-window.addEventListener('scroll', function() {
-  nav.classList.toggle('scrolled', window.scrollY > 50);
-}, { passive: true });
-
-/* ── Init ───────────────────────────────────────────────────── */
 renderSection(gridAcademic, 'academic');
-renderSection(gridSolo,     'solo');
+renderSection(gridSolo, 'solo');
+initStaticReveals();
+initNavigationState();
+initFooterYear();
