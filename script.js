@@ -116,6 +116,30 @@ const PROJECTS = [
     description: 'A personal C++ engine and editor focused on gameplay prototyping. I built editor workflow tools, terrain rendering and collision integration, scene and prefab loading, and runtime validation tooling to debug systems across rendering, physics, and gameplay. Vehicle physics is part of the ongoing low-level systems work here, but it is not presented as a finished feature.'
   },
   {
+    id: 'tnp6-networking',
+    title: 'UDP Gameplay Replication Prototype',
+    category: 'solo',
+    badge: 'Networking Prototype',
+    youtubeId: null,
+    thumbnail: 'assets/tnp6-network-preview.svg',
+    role: 'Gameplay / Network Programmer',
+    tags: ['C++', 'UDP', 'Replication', 'Networking'],
+    engine: 'TGE / C++',
+    description: 'A student networking prototype exploring unreliable UDP gameplay synchronization. It sends entity and object state through a client/server loop with sequence numbers, ACK and PositionAck messages, resend tracking, simulated packet loss and latency, proximity-based update throttling, and client-side interpolation for remote positions.'
+  },
+  {
+    id: 'raytracer',
+    title: 'Parallel CPU Raytracer',
+    category: 'solo',
+    badge: 'Graphics Prototype',
+    youtubeId: null,
+    thumbnail: 'assets/raytracer-preview.png',
+    role: 'Graphics Programmer',
+    tags: ['C++', 'Raytracing', 'Rendering', 'Parallelism'],
+    engine: 'C++ / CPU Renderer',
+    description: 'A compact CPU raytracer that loads simple scene files, traces spheres with directional lighting, mirror and emissive materials, sky gradients, tone mapping, and PNG output. The render loop includes a parallel execution path using concurrency::parallel_for.'
+  },
+  {
     id: 'flocking',
     title: 'Enemy Flocking AI',
     category: 'solo',
