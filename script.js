@@ -121,7 +121,7 @@ const PROJECTS = [
     category: 'solo',
     badge: 'Networking Prototype',
     youtubeId: null,
-    thumbnail: 'assets/tnp6-network-preview.svg',
+    thumbnail: 'assets/tnp6-network-preview.png',
     role: 'Gameplay / Network Programmer',
     tags: ['C++', 'UDP', 'Replication', 'Networking'],
     engine: 'TGE / C++',
