@@ -113,7 +113,7 @@ const PROJECTS = [
     role: 'Engine / Gameplay Programmer',
     tags: ['C++', 'DirectX 11', 'Tools', 'Physics'],
     engine: 'Custom Engine',
-    description: 'A personal C++ engine and editor focused on gameplay prototyping. I built editor workflow tools, terrain rendering and collision integration, scene and prefab loading, and runtime validation tooling to debug systems across rendering, physics, and gameplay. Vehicle physics is part of the ongoing low-level systems work here, but it is not presented as a finished feature.'
+    description: 'A personal engine project focused on gameplay prototyping. It includes editor workflow tools, terrain rendering and collision, scene and prefab loading, and debug tooling used to inspect systems across rendering, physics, and gameplay. Vehicle physics is part of the ongoing low-level systems work here, not a finished feature.'
   },
   {
     id: 'tnp6-networking',
@@ -125,7 +125,7 @@ const PROJECTS = [
     role: 'Gameplay / Network Programmer',
     tags: ['C++', 'UDP', 'Replication', 'Networking'],
     engine: 'TGE / C++',
-    description: 'A student networking prototype exploring unreliable UDP gameplay synchronization. It sends entity and object state through a client/server loop with sequence numbers, ACK and PositionAck messages, resend tracking, simulated packet loss and latency, proximity-based update throttling, and client-side interpolation for remote positions.'
+    description: 'An older networking prototype built to explore UDP gameplay synchronization. It uses sequence numbers, acknowledgements, resend logic, simulated packet loss and latency, proximity-based updates, and client-side interpolation for remote movement.'
   },
   {
     id: 'raytracer',
@@ -137,7 +137,7 @@ const PROJECTS = [
     role: 'Graphics Programmer',
     tags: ['C++', 'Raytracing', 'Rendering', 'Parallelism'],
     engine: 'C++ / CPU Renderer',
-    description: 'A compact CPU raytracer that loads simple scene files, traces spheres with directional lighting, mirror and emissive materials, sky gradients, tone mapping, and PNG output. The render loop includes a parallel execution path using concurrency::parallel_for.'
+    description: 'A small C++ rendering project built to explore CPU raytracing. It loads scenes from text files, renders spheres with directional light, mirror and emissive materials, tone maps the result, and writes PNG output through a parallel render loop.'
   },
   {
     id: 'flocking',
