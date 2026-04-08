@@ -104,6 +104,18 @@ const PROJECTS = [
     description: 'A Starfox-inspired on-rails shooter developed in Unity over 8 weeks, my first group project at TGA. I worked on UI, a persistent GameManager, collectables, health and damage, wall bounce behavior, and a movement precision bug fix.'
   },
   {
+    id: 'custom-engine',
+    title: 'Custom C++ Engine & Tooling',
+    category: 'solo',
+    badge: 'Personal Engine',
+    youtubeId: null,
+    thumbnail: 'assets/engine-feature-still.png',
+    role: 'Engine / Gameplay Programmer',
+    tags: ['C++', 'DirectX 11', 'Tools', 'Physics'],
+    engine: 'Custom Engine',
+    description: 'A personal C++ engine and editor focused on gameplay prototyping. I built editor workflow tools, terrain rendering and collision integration, scene and prefab loading, and runtime validation tooling to debug systems across rendering, physics, and gameplay. Vehicle physics is part of the ongoing low-level systems work here, but it is not presented as a finished feature.'
+  },
+  {
     id: 'flocking',
     title: 'Enemy Flocking AI',
     category: 'solo',
