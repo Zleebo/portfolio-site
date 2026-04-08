@@ -594,7 +594,7 @@ strong {
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
 }
 
 .engine-feature__content {
@@ -1084,7 +1084,15 @@ strong {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.modal-media-wrap iframe {
   object-fit: cover;
+}
+
+.modal-media-wrap img {
+  object-fit: contain;
+  background: #070809;
 }
 
 .modal-no-video {
