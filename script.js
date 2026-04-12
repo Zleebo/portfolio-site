@@ -10,7 +10,7 @@ const PROJECTS = [
     tags: ['UE5', 'AngelScript', 'Co-op'],
     engine: 'Unreal Engine 5',
     duration: '8 Weeks',
-    description: 'A split-screen co-op game inspired by It Takes Two, developed in Unreal Engine 5 over 8 weeks using AngelScript. My contributions included charging enemies and moving hazards.'
+    description: 'A split-screen co-op game inspired by It Takes Two, developed in Unreal Engine 5 over 8 weeks using AngelScript. Built charging enemies and moving hazards.'
   },
   {
     id: 'bloom',
@@ -23,7 +23,7 @@ const PROJECTS = [
     tags: ['C++', 'Custom Engine', 'FPS'],
     engine: 'TGE (Custom Engine)',
     duration: '15 Weeks',
-    description: 'A first-person shooter inspired by Metroid Prime, developed over 15 weeks. I built a behavior tree system for enemy AI, a robot enemy with patrol, seek, and attack states, a Unity path editor for designers, and a configurable laser hazard using editor-defined endpoints.'
+    description: 'A first-person shooter inspired by Metroid Prime, developed over 15 weeks. Built a behavior tree system for enemy AI, a robot enemy with patrol, seek, and attack states, a standalone Unity patrol editor for level designers that exports path data to TGE via a custom editor button, and a configurable laser hazard using editor-defined endpoints.'
   },
   {
     id: 'spite',
@@ -36,7 +36,7 @@ const PROJECTS = [
     tags: ['C++', 'Custom Engine', 'ARPG'],
     engine: 'TGE (Custom Engine)',
     duration: '15 Weeks',
-    description: 'A Diablo-like action RPG developed over 15 weeks. I implemented three enemy types, boid-based flocking to avoid clipping, A* pathfinding with funnel smoothing on NavMesh data, and a six-phase boss with JSON-driven attack patterns for designer iteration.'
+    description: 'A Diablo-like action RPG developed over 15 weeks. Built three enemy types, boid-based flocking to avoid clipping, A* pathfinding with funnel smoothing on NavMesh data, and a six-phase boss with JSON-driven attack patterns for designer iteration.'
   },
   {
     id: 'suspectre',
@@ -49,7 +49,7 @@ const PROJECTS = [
     tags: ['Unity', 'Top-Down', 'Action Adventure'],
     engine: 'Unity',
     duration: '8 Weeks',
-    description: 'A Zelda-inspired top-down action-adventure game developed in Unity over 8 weeks. I built slime enemies with multiple variants, including melee, ranged, and split-on-death behavior.'
+    description: 'A Zelda-inspired top-down action-adventure game developed in Unity over 8 weeks. Built slime enemies with multiple variants — melee, ranged, and split-on-death behavior.'
   },
   {
     id: 'shipwrecked',
@@ -62,7 +62,7 @@ const PROJECTS = [
     tags: ['C++', 'TGE2D', 'Platformer'],
     engine: 'TGE2D (Custom Engine)',
     duration: '8 Weeks',
-    description: 'A Celeste-inspired platformer built in TGE2D over 8 weeks. My contributions included enemy follow behavior, moving hazards, camera tracking, and loading fixes.'
+    description: 'A Celeste-inspired platformer built in TGE2D over 8 weeks. Built enemy follow behavior, moving hazards, and camera tracking.'
   },
   {
     id: 'curse-of-decay',
@@ -75,7 +75,7 @@ const PROJECTS = [
     tags: ['C++', 'TGE2D', 'Bullet Hell'],
     engine: 'TGE2D (Custom Engine)',
     duration: '8 Weeks',
-    description: 'A side-scrolling bullet hell game developed in TGE2D over 8 weeks. I was responsible for the boss enemy, enemy loading systems, level select, a damage blink effect, and loading of pickups and player values.'
+    description: 'A side-scrolling bullet hell game developed in TGE2D over 8 weeks. Built the boss enemy, enemy spawning systems, level select, a damage blink effect, and pickup and player stat loading.'
   },
   {
     id: 'spy-who-blobbed-me',
@@ -88,7 +88,7 @@ const PROJECTS = [
     tags: ['Unity', 'Mobile', 'Puzzle'],
     engine: 'Unity',
     duration: '8 Weeks',
-    description: 'A top-down mobile puzzle game developed in Unity over 8 weeks. I built draggable interactables, touch input handling, enemy and collectable systems, and character animations.'
+    description: 'A top-down mobile puzzle game developed in Unity over 8 weeks. Built draggable interactables, touch input handling, enemy and collectable systems, and character animations.'
   },
   {
     id: 'kit-commander',
@@ -101,7 +101,7 @@ const PROJECTS = [
     tags: ['Unity', 'Shooter'],
     engine: 'Unity',
     duration: '8 Weeks',
-    description: 'A Starfox-inspired on-rails shooter developed in Unity over 8 weeks, my first group project at TGA. I worked on UI, a persistent GameManager, collectables, health and damage, wall bounce behavior, and a movement precision bug fix.'
+    description: 'A Starfox-inspired on-rails shooter developed in Unity over 8 weeks, my first group project at TGA. Built UI, a persistent GameManager, collectables, health and damage systems, and wall bounce behavior.'
   },
   {
     id: 'custom-engine',
@@ -109,11 +109,13 @@ const PROJECTS = [
     category: 'solo',
     badge: 'Personal Engine',
     youtubeId: null,
-    thumbnail: 'assets/engine-feature-still.png',
+    thumbnail: 'assets/terrain-editor-thumb.jpg',
+    videoSrc: 'assets/terrain-editor.mp4',
     role: 'Engine / Gameplay Programmer',
     tags: ['C++', 'DirectX 11', 'Tools', 'Physics'],
     engine: 'Custom Engine',
-    description: 'A personal engine project focused on gameplay prototyping. It includes editor workflow tools, terrain rendering and collision, scene and prefab loading, and debug tooling used to inspect systems across rendering, physics, and gameplay. Vehicle physics is part of the ongoing low-level systems work here, not a finished feature.'
+    githubUrl: 'https://github.com/Zleebo/TerrainEditor',
+    description: 'A personal C++ engine and editor built for gameplay prototyping. Includes a scene editor with hierarchy, asset browser, selection gizmos, and undo/redo; terrain generation with height-mapped collision used for both rendering and physics; scene and prefab loading on a component-based runtime; and debug overlays for collision shapes and physics state. System coverage spans rendering, animation, audio, and UI. Vehicle physics is in progress.'
   },
   {
     id: 'tnp6-networking',
@@ -121,11 +123,13 @@ const PROJECTS = [
     category: 'solo',
     badge: 'Networking Prototype',
     youtubeId: null,
-    thumbnail: 'assets/tnp6-network-preview.png',
+    thumbnail: 'assets/tnp6-network-thumb.jpg',
+    videoSrc: 'assets/tnp6-network.mp4',
     role: 'Gameplay / Network Programmer',
-    tags: ['C++', 'UDP', 'Replication', 'Networking'],
+    tags: ['C++', 'UDP', 'Game Netcode'],
     engine: 'TGE / C++',
-    description: 'An older networking prototype built to explore UDP gameplay synchronization. It uses sequence numbers, acknowledgements, resend logic, simulated packet loss and latency, proximity-based updates, and client-side interpolation for remote movement.'
+    githubUrl: 'https://github.com/Zleebo/udp-network-prototype',
+    description: 'A UDP gameplay replication prototype built to explore game-state synchronization. Implements sequence numbers, acknowledgements, resend logic, packet loss and latency simulation, proximity-based entity updates, and client-side interpolation for smooth remote movement. A live debug panel shows RTT, packet loss, and bandwidth.'
   },
   {
     id: 'raytracer',
@@ -133,11 +137,11 @@ const PROJECTS = [
     category: 'solo',
     badge: 'Graphics Prototype',
     youtubeId: null,
-    thumbnail: 'assets/raytracer-preview.png',
+    thumbnail: 'assets/raytracer-preview.jpg',
     role: 'Graphics Programmer',
-    tags: ['C++', 'Raytracing', 'Rendering', 'Parallelism'],
+    tags: ['C++', 'Raytracing', 'Rendering', 'Multi-threaded'],
     engine: 'C++ / CPU Renderer',
-    description: 'A small C++ rendering project built to explore CPU raytracing. It loads scenes from text files, renders spheres with directional light, mirror and emissive materials, tone maps the result, and writes PNG output through a parallel render loop.'
+    description: 'A compact C++ rendering project exploring CPU raytracing. Loads scenes from text files, renders spheres with directional and emissive lighting, Lambertian and mirror materials, ACES tone mapping, and gamma-corrected PNG output. The render loop is parallelised with Microsoft PPL\'s concurrency::parallel_for.'
   },
   {
     id: 'flocking',
@@ -454,6 +458,18 @@ function buildModalMedia(project) {
     return;
   }
 
+  if (project.videoSrc) {
+    const video = document.createElement('video');
+    video.src = project.videoSrc;
+    video.autoplay = true;
+    video.muted = true;
+    video.loop = true;
+    video.setAttribute('playsinline', '');
+    video.setAttribute('controls', '');
+    modalMedia.appendChild(video);
+    return;
+  }
+
   const thumb = getCardThumb(project);
   if (thumb) {
     const image = createNode('img', '', null);
@@ -499,6 +515,18 @@ function openModal(project) {
 
   modalRole.textContent = project.role;
   modalDesc.textContent = project.description;
+
+  const existingGithub = modal.querySelector('.modal-github');
+  if (existingGithub) existingGithub.remove();
+  if (project.githubUrl) {
+    const githubLink = document.createElement('a');
+    githubLink.href = project.githubUrl;
+    githubLink.target = '_blank';
+    githubLink.rel = 'noopener noreferrer';
+    githubLink.className = 'modal-github';
+    githubLink.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>View on GitHub';
+    modalDesc.insertAdjacentElement('afterend', githubLink);
+  }
 
   modal.classList.toggle('academic', project.category === 'academic');
   modal.classList.add('open');
