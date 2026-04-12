@@ -2,7 +2,7 @@
 
 My portfolio site. Gameplay programmer at Starbreeze Studios.
 
-**Live site:** https://zleebo.github.io/portfolio-site
+**Live site:** https://hugo-ehrman-portfolio.netlify.app
 
 ## Stack
 
