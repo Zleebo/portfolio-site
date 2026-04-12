@@ -1,6 +1,6 @@
 # Hugo Ehrman - Portfolio Site
 
-Personal portfolio for Hugo Ehrman, gameplay programmer at Starbreeze Studios.
+My portfolio site. Gameplay programmer at Starbreeze Studios.
 
 **Live site:** https://zleebo.github.io/portfolio-site
 
