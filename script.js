@@ -115,7 +115,7 @@ const PROJECTS = [
     tags: ['C++', 'DirectX 11', 'Tools', 'Physics'],
     engine: 'Custom Engine',
     githubUrl: 'https://github.com/Zleebo/TerrainEditor',
-    description: 'A personal C++ engine and editor built for gameplay prototyping. Includes a scene editor with hierarchy, asset browser, selection gizmos, and undo/redo; terrain generation with height-mapped collision used for both rendering and physics; scene and prefab loading on a component-based runtime; and debug overlays for collision shapes and physics state. System coverage spans rendering, animation, audio, and UI. Vehicle physics is in progress.'
+    description: 'A personal C++ engine and editor built for gameplay prototyping. Includes a scene editor with hierarchy, asset browser, selection gizmos, and undo/redo; terrain generation with height-mapped collision used for both rendering and physics; scene and prefab loading on a component-based runtime; and debug overlays for collision shapes and physics state. Vehicle physics is in progress.'
   },
   {
     id: 'tnp6-networking',

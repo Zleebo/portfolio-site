@@ -21,6 +21,7 @@
       <ul class="nav-links">
         <li><a href="#hero">Overview</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#featured-work">Work</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -72,7 +73,7 @@
             NPC behavior, gameplay code, and debugging tools across PAYDAY 3 and Project Baxter.
           </p>
           <div class="stack-list" aria-label="Core tools and technologies">
-            <span>Unreal Engine 5</span>
+            <span>Unreal Engine 4/5</span>
             <span>C++</span>
             <span>Blueprint</span>
             <span>Gameplay Ability System</span>
@@ -91,7 +92,7 @@
               <p class="credit-subtitle">Co-op Heist FPS</p>
               <p class="credit-role">Gameplay Programmer / NPC Behavior</p>
               <p class="credit-summary">
-                Current work on the live game across gameplay-side NPC behavior systems, support work, and production debugging in a shipped co-op heist FPS.
+                NPC behavior systems, gameplay code, and production debugging on a live co-op heist FPS.
               </p>
               <div class="credit-tags">
                 <span>C++</span>
@@ -109,7 +110,7 @@
               <p class="credit-subtitle">Dungeons &amp; Dragons</p>
               <p class="credit-role">Gameplay Programmer</p>
               <p class="credit-summary">
-                Cancelled Dungeons &amp; Dragons project in Unreal Engine 5, built as a cross-play multiplayer game with a live-service model.
+                A Dungeons &amp; Dragons project in Unreal Engine 5, built as a cross-play multiplayer game with a live-service model. Cancelled in 2025.
               </p>
               <div class="credit-tags">
                 <span>C++</span>
@@ -126,23 +127,26 @@
       <div class="container">
         <article class="engine-feature panel fade-up">
           <div class="engine-feature__media">
-            <img
-              src="assets/engine-feature-still.png"
-              alt="Custom C++ engine editor showing terrain, tools, and runtime debug views."
-              decoding="async"
-            />
+            <video
+              src="assets/terrain-editor.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              aria-label="Custom C++ engine editor showing terrain sculpting, tools, and runtime views."
+            ></video>
           </div>
 
           <div class="engine-feature__content">
             <p class="kicker">Featured Technical Work</p>
             <h2>Custom C++ Engine &amp; Tooling</h2>
             <p class="engine-feature__summary">
-              A personal C++ engine and editor project built around gameplay prototyping. The work spans editor tools, terrain rendering and collision, scene and prefab loading, runtime physics, and the debug tooling used to inspect how those systems interact.
+              A personal C++ engine and editor built for gameplay prototyping — editor tools, terrain rendering and collision, scene and prefab loading, runtime physics, and debug tooling for inspecting how those systems interact.
             </p>
 
             <div class="engine-feature__chips" aria-label="Technical highlights">
               <span class="engine-feature__chip">C++ Engine + Editor</span>
-              <span class="engine-feature__chip">DX11 Terrain + Water</span>
+              <span class="engine-feature__chip">DX11 Terrain Rendering</span>
               <span class="engine-feature__chip">Scene/Prefab Workflow</span>
               <span class="engine-feature__chip">Physics Debug + Validation</span>
             </div>
@@ -151,12 +155,12 @@
               <li>Built editor tools for scene hierarchy, selection, gizmos, terrain editing, and undo/redo.</li>
               <li>Connected terrain rendering and collision so the same terrain data works as both a visual surface and a physics source.</li>
               <li>Built scene and prefab loading around a component-based runtime to make iteration faster.</li>
-              <li>Added debug overlays and smoke tests to inspect collision, startup behavior, and physics regressions.</li>
+              <li>Added debug overlays to inspect collision shapes, physics state, and catch regressions during development.</li>
             </ul>
-
-            <p class="engine-feature__closing">
-              This is the clearest example on the site of the work behind gameplay: editor tools, runtime systems, and debugging built to make iteration faster and more reliable.
-            </p>
+            <a href="https://github.com/Zleebo/TerrainEditor" target="_blank" rel="noopener noreferrer" class="modal-github">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              View on GitHub
+            </a>
           </div>
         </article>
       </div>
@@ -166,9 +170,9 @@
       <div class="container">
         <header class="section-head fade-up">
           <p class="kicker">Projects</p>
-          <h2>Older work and experiments.</h2>
+          <h2>Academic &amp; Personal Projects</h2>
           <p class="section-intro">
-            School projects and focused technical demos from The Game Assembly.
+            Team projects from The Game Assembly and personal technical work.
           </p>
         </header>
 
@@ -188,7 +192,7 @@
             <div>
               <p class="chapter-kicker chapter-kicker--solo">Personal Work</p>
               <h3>Focused Systems</h3>
-              <p>Smaller demos and isolated systems pulled out from larger projects.</p>
+              <p>Personal projects and isolated systems from larger projects.</p>
             </div>
           </header>
           <div class="project-grid" id="grid-solo"></div>
@@ -200,8 +204,8 @@
   <footer id="contact" class="section section-alt contact">
     <div class="container contact-layout fade-up">
       <p class="kicker">Contact</p>
-      <h2>For gameplay programming roles, you can reach me here.</h2>
-      <p class="contact-sub">The CV has the full background. This site is mainly here for project context.</p>
+      <h2>Open to C++ roles. You can reach me here.</h2>
+      <p class="contact-sub">The CV has the full background.</p>
       <a href="mailto:hugo.ehrman@gmail.com" class="btn btn-solid contact-email">hugo.ehrman@gmail.com</a>
 
       <div class="social-row">
